@@ -1,0 +1,50 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans' !important;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Montserrat' !important;
+}
+
+a.navbar-brand {
+    color: inherit;
+}
+
+.bg-light {
+    background-color: #FAFAFA !important;
+}
+
+.bg-primary {
+    background-color: #B22562 !important;
+}
+
+.btn-primary {
+    color: #222;
+    background-color: #e9cf54 !important;
+    border-color: #e9cf54 !important;
+}
+
+.btn-outline-primary {
+    color: #e9cf54 !important;
+    border-color: #e9cf54 !important;
+}
+
+.text-primary {
+    color: #B22562 !important;
+}
+
+.navbar-brand-logo {
+    width: 54px;
+}
+
+.jumbotron-home {
+    background-color: #B22562;
+    color: #FFF;
+}
+
+.container-home-categories .btn {
+    width: 10rem;
+}

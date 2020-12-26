@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://www.quierocambiarlo.es/sitemap.xml
