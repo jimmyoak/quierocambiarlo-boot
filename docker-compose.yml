@@ -11,6 +11,8 @@ services:
       - SPRING_PROFILES_ACTIVE=pro
   proxy:
     image: nginx:1.15
+    depends_on:
+      - application
     volumes:
       - './docker/nginx:/etc/nginx/conf.d:ro'
       - './docker/ssl:/etc/ssl:ro'
