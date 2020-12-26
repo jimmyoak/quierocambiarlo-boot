@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  application:
+    image: openjdk:15-jdk-slim
+    working_dir: '/app'
+    volumes:
+      - "./build/libs:/app"
+    entrypoint: [ 'java' ,'-jar', '-Duser.timezone=UTC' ,'app.jar' ]
+    environment:
+      - SPRING_PROFILES_ACTIVE=pro
+  proxy:
+    image: nginx:1.15
+    volumes:
+      - './docker/nginx:/etc/nginx/conf.d:ro'
+      - './docker/ssl:/etc/ssl:ro'
+    ports:
+      - '80:80'
+      - '443:443'

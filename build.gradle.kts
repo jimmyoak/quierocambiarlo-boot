@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
 	id("org.springframework.boot") version "2.4.1"
@@ -10,6 +11,14 @@ plugins {
 group = "es.quierocambiarlo"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_15
+
+springBoot {
+	mainClass.set("es.quierocambiarlo.boot.Application")
+}
+
+tasks.getByName<BootJar>("bootJar") {
+	archiveFileName.set("app.jar")
+}
 
 repositories {
 	mavenCentral()
