@@ -1,0 +1,5 @@
+<meta name="og:title" property="og:title" content="{{ openGraph.title }}">
+<meta name="og:description" property="og:description" content="{{ openGraph.description }}">
+<meta name="og:url" property="og:url" content="{{ openGraph.url }}">
+<meta name="og:image" property="og:image" content="{{ openGraph.image }}">
+<meta name="og:type" property="og:type" content="{{ openGraph.type }}">

@@ -1,0 +1,10 @@
+<div class="mb-4">Síguenos en:</div>
+<a href="https://www.instagram.com/quiero.cambiarlo/" target="_blank" class="text-decoration-none m-1 text-primary">
+    <i class="fab fa-instagram display-4 align-middle"></i>
+    Instagram
+</a>
+<a href="https://www.facebook.com/QuieroCambiarlo-105305711454002" target="_blank"
+   class="text-decoration-none m-1 text-blue">
+    <i class="fab fa-facebook display-4 align-middle"></i>
+    Facebook
+</a>

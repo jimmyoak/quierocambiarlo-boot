@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% include './tracking' %}
+    {% include './default/meta' %}
+    {% include './default/favicon' %}
+    {% include './default/style' %}
+
+    {% include './default/head_seo' %}
+    {% include './open_graph' %}
+
+    <title>{% block title %}QuieroCambiarlo - Haz trueques. Cambia coches, motos, bicis y móviles{% endblock %}</title>
+</head>
+<body class="bg-light">
+<header>
+    {% block header %}{% include './default/header' %}{% endblock %}
+</header>
+
+{% block content %}{% endblock %}
+
+<footer class="text-center mb-4">
+    {% block footer %}{% include './default/footer' %}{% endblock %}
+</footer>
+</body>
+</html>

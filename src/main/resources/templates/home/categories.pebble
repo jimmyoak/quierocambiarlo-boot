@@ -1,0 +1,18 @@
+<section class="container text-center p-4 container-home-categories">
+    <a href="/trueques-de-coches-de-segunda-mano.html" class="btn btn-lg btn-outline-secondary my-1">
+        <i class="fa fa-car display-4 d-block"></i>
+        <h5 class="card-title m-0">Coches</h5>
+    </a>
+    <a href="/trueques-de-motos-de-segunda-mano.html" class="btn btn-lg btn-outline-secondary my-1">
+        <i class="fa fa-motorcycle display-4 d-block"></i>
+        <h5 class="card-title m-0">Motos</h5>
+    </a>
+    <a href="/trueques-de-bicicletas-de-segunda-mano.html" class="btn btn-lg btn-outline-secondary my-1">
+        <i class="fa fa-bicycle display-4 d-block"></i>
+        <h5 class="card-title m-0">Bicicletas</h5>
+    </a>
+    <a href="/trueques-de-moviles-de-segunda-mano.html" class="btn btn-lg btn-outline-secondary my-1">
+        <i class="fa fa-mobile display-4 d-block"></i>
+        <h5 class="card-title m-0">Móviles</h5>
+    </a>
+</section>
