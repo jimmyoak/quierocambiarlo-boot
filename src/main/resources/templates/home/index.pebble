@@ -1,15 +1,15 @@
 {% extends 'layout/base' %}
 {% block title %}QuieroCambiarlo - Haz trueques. Cambia coches, motos, bicis y móviles{% endblock %}
 {% set seo = {
-    'canonical': 'https://www.quierocambiarlo.es/',
+    'canonical': url('/'),
     'description': 'QuieroCambiarlo.es: Web de intercambio, cambia aquello que no uses, consigue aquello que necesitas',
     'keywords': 'cambiar, quiero cambiar, intercambio, anuncios clasificados, gratis, busco cambiar por, por cosas, trueque'
 } %}
 {% set openGraph = {
     'title': 'QuieroCambiarlo',
     'description': 'QuieroCambiarlo.es: Web de intercambio, cambia aquello que no uses, consigue aquello que necesitas',
-    'url': 'https://www.quierocambiarlo.es/',
-    'image': 'https://www.quierocambiarlo.es/logo.png',
+    'url': url('/'),
+    'image': url('/logo.png'),
     'type': 'website'
 } %}
 
