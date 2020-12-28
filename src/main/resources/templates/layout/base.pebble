@@ -5,6 +5,7 @@
     {% include './default/meta' %}
     {% include './default/favicon' %}
     {% include './default/style' %}
+    {% include './default/script' %}
 
     {% include './default/head_seo' %}
     {% include './open_graph' %}
