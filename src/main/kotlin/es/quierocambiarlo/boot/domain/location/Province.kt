@@ -30,7 +30,7 @@ enum class Province(val label: String, val slug: String, val region: Region) {
     LAS_PALMAS("Las Palmas", "las_palmas", Region.ISLAS_BALEARES),
     LA_RIOJA("La Rioja", "la_rioja", Region.LA_RIOJA),
     LEON("León", "leon", Region.CASTILLA_Y_LEON),
-    LERIDA("Lérida", "lerida", Region.CATALUNA),
+    LERIDA("Lleida", "lerida", Region.CATALUNA),
     LUGO("Lugo", "lugo", Region.GALICIA),
     MADRID("Madrid", "madrid", Region.COMUNIDAD_DE_MADRID),
     MALAGA("Málaga", "malaga", Region.ANDALUCIA),

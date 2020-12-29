@@ -20,4 +20,8 @@ enum class Region(val label: String, val slug: String) {
     PAIS_VASCO("País Vasco", "pais-vasco"),
     PRINCIPADO_DE_ASTURIAS("Asturias", "asturias"),
     REGION_DE_MURCIA("Murcia", "murcia"),
+    ;
+
+    val provinces: List<Province>
+        get() = Province.values().filter { it.region == this }
 }
