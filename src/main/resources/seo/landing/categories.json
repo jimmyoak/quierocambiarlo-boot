@@ -111,5 +111,31 @@
       "automóviles",
       "autos"
     ]
+  },
+  {
+    "name": "Moda",
+    "slug": "moda-de-segunda-mano",
+    "title": "Trueques y cambios de moda, ropa, accesorios y complementos de segunda mano",
+    "icon": "fa-tshirt",
+    "h1": "Anuncios de cambios de moda, ropa y complementos en España. Trueques e intercambios: pantalones, camisas, abrigos, chaquetas, sudaderas, pendientes, collares, ropa deportiva, calzado, zapatos",
+    "h2": "Cambios de moda, ropa, accesorios y complementos de segunda mano",
+    "description": "Haz trueques, intercambios y cambios de moda, ropa, complementos y accesorios de segunda mano.",
+    "keywords": [
+      "cambiar",
+      "quiero cambiar",
+      "intercambio",
+      "anuncios clasificados",
+      "gratis",
+      "busco cambiar por",
+      "trueque",
+      "ropa",
+      "complementos",
+      "accesorios",
+      "camisetas",
+      "vestidos",
+      "zapatos",
+      "zapatillas",
+      "segunda mano"
+    ]
   }
 ]
