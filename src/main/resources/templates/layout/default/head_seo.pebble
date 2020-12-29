@@ -1,3 +1,7 @@
 <meta name="description" content="{{ seo.description }}">
-<meta name="keywords" content="{{ seo.keywords }}">
+{% if seo.keywords is iterable %}
+    <meta name="keywords" content="{{ seo.keywords | join(', ') }}">
+{% else %}
+    <meta name="keywords" content="{{ seo.keywords }}">
+{% endif %}
 <link rel="canonical" href="{{ seo.canonical }}"/>

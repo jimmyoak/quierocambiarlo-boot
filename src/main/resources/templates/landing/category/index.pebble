@@ -1,0 +1,8 @@
+{% extends 'layout/base' %}
+{% block title %}{{ seo.title }}{% endblock %}
+
+{% block content %}
+    {% include './jumbotron' %}
+    {% include './categories_menu' %}
+    {% include './category_seo' %}
+{% endblock %}
