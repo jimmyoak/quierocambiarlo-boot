@@ -86,5 +86,30 @@
       "patinetes",
       "segunda mano"
     ]
+  },
+  {
+    "name": "Motor",
+    "slug": "motor-de-segunda-mano",
+    "title": "Trueques y cambios de motor, coches, motos y furgonetas de segunda mano",
+    "icon": "fa-car-side",
+    "h1": "Anuncios de cambios de coches, motos y motor en España. Trueques, intercambios de coches, motos y vehículos de ocasión de todas las marcas.\n    Audi, BMW, Seat, Opel, Renault, Honda, Suzuki, Yamaha, KTM, Mercedes, Citroen. Encuéntralo nuevo o de segunda mano.",
+    "h2": "Cambios de vehículos de segunda mano",
+    "description": "Haz trueques, intercambios y cambios de coches, motos y furgonetas de segunda mano. Cambia tu vehículo por otro o por cualquier otra cosa.",
+    "visible": false,
+    "keywords": [
+      "cambiar",
+      "quiero cambiar",
+      "intercambio",
+      "anuncios clasificados",
+      "gratis",
+      "busco cambiar por",
+      "trueque",
+      "motor",
+      "coches",
+      "motos",
+      "segunda mano",
+      "automóviles",
+      "autos"
+    ]
   }
 ]

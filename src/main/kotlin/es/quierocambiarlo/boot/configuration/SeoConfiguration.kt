@@ -23,6 +23,6 @@ class SeoConfiguration {
         objectMapper: ObjectMapper,
         @Value("classpath:seo/landing/categories.json") data: Resource
     ): List<MenuCategory> =
-        objectMapper.readValue(data.inputStream)
+        objectMapper.readValue<List<MenuCategory>>(data.inputStream).filter { it.visible }
 
 }

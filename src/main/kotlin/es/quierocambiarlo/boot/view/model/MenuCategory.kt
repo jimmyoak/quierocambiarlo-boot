@@ -4,6 +4,7 @@ data class MenuCategory(
     val name: String,
     val icon: String,
     val slug: String,
+    val visible: Boolean = true,
     val active: Boolean = false
 ) {
     fun activate() = if (active) this else copy(active = true)
