@@ -1,0 +1,18 @@
+{% extends 'layout/base' %}
+{% block title %}Publica tu anuncio de intercambio, trueque o cambio{% endblock %}
+{% set seo = {
+    'canonical': url('/publicar-anuncio.html'),
+    'description': 'Publica tu anuncio de intercambio, trueque o cambio. Cambia coches, motos, móviles, bicicletas o cualquier cosa que tengas por casa',
+    'keywords': 'cambiar, trueque, quiero cambiar, intercambio, anuncios clasificados, publicar, publicar anuncio, propon un cambio'
+} %}
+{% set openGraph = {
+    'title': 'Publica tu anuncio de intercambio, trueque o cambio',
+    'description': 'Publica tu anuncio de intercambio, trueque o cambio. Cambia coches, motos, móviles, bicicletas o cualquier cosa que tengas por casa',
+    'url': url('/publicar-anuncio.html'),
+    'image': url('/logo.png'),
+    'type': 'website'
+} %}
+
+{% block content %}
+    {% include './jumbotron' %}
+{% endblock %}
