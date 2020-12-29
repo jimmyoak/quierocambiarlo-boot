@@ -7,7 +7,7 @@ enum class Province(val label: String, val slug: String, val region: Region) {
     ALMERIA("Almería", "almeria", Region.ANDALUCIA),
     ASTURIAS("Asturias", "asturias", Region.PRINCIPADO_DE_ASTURIAS),
     AVILA("Ávila", "avila", Region.CASTILLA_Y_LEON),
-    A_CORUNA("A Coruña", "a_coruna", Region.GALICIA),
+    A_CORUNA("A Coruña", "a-coruna", Region.GALICIA),
     BADAJOZ("Badajoz", "badajoz", Region.EXTREMADURA),
     BALEARES("Baleares", "baleares", Region.ISLAS_BALEARES),
     BARCELONA("Barcelona", "barcelona", Region.CATALUNA),
@@ -17,7 +17,7 @@ enum class Province(val label: String, val slug: String, val region: Region) {
     CANTABRIA("Cantabria", "cantabria", Region.CANTABRIA),
     CASTELLON("Castellón", "castellon", Region.COMUNIDAD_VALENCIANA),
     CEUTA("Ceuta", "ceuta", Region.CEUTA),
-    CIUDAD_REAL("Ciudad Real", "ciudad_real", Region.CASTILLA_LA_MANCHA),
+    CIUDAD_REAL("Ciudad Real", "ciudad-real", Region.CASTILLA_LA_MANCHA),
     CORDOBA("Córdoba", "cordoba", Region.ANDALUCIA),
     CUENCA("Cuenca", "cuenca", Region.CASTILLA_LA_MANCHA),
     GIPUZKOA("Gipuzkoa", "gipuzkoa", Region.PAIS_VASCO),
@@ -27,8 +27,8 @@ enum class Province(val label: String, val slug: String, val region: Region) {
     HUELVA("Huelva", "huelva", Region.ANDALUCIA),
     HUESCA("Huesca", "huesca", Region.ARAGON),
     JAEN("Jaén", "jaen", Region.ANDALUCIA),
-    LAS_PALMAS("Las Palmas", "las_palmas", Region.ISLAS_BALEARES),
-    LA_RIOJA("La Rioja", "la_rioja", Region.LA_RIOJA),
+    LAS_PALMAS("Las Palmas", "las-palmas", Region.ISLAS_BALEARES),
+    LA_RIOJA("La Rioja", "la-rioja", Region.LA_RIOJA),
     LEON("León", "leon", Region.CASTILLA_Y_LEON),
     LERIDA("Lleida", "lerida", Region.CATALUNA),
     LUGO("Lugo", "lugo", Region.GALICIA),
@@ -41,7 +41,7 @@ enum class Province(val label: String, val slug: String, val region: Region) {
     PALENCIA("Palencia", "palencia", Region.CASTILLA_Y_LEON),
     PONTEVEDRA("Pontevedra", "pontevedra", Region.GALICIA),
     SALAMANCA("Salamanca", "salamanca", Region.CASTILLA_Y_LEON),
-    SANTA_CRUZ_DE_TENERIFE("Santa Cruz de Tenerife", "santa_cruz_de_tenerife", Region.CANARIAS),
+    SANTA_CRUZ_DE_TENERIFE("Santa Cruz de Tenerife", "santa-cruz-de-tenerife", Region.CANARIAS),
     SEGOVIA("Segovia", "segovia", Region.CASTILLA_Y_LEON),
     SEVILLA("Sevilla", "sevilla", Region.ANDALUCIA),
     SORIA("Soria", "soria", Region.CASTILLA_Y_LEON),
@@ -53,4 +53,16 @@ enum class Province(val label: String, val slug: String, val region: Region) {
     VIZCAYA("Vizcaya", "vizcaya", Region.PAIS_VASCO),
     ZAMORA("Zamora", "zamora", Region.CASTILLA_Y_LEON),
     ZARAGOZA("Zaragoza", "zaragoza", Region.ARAGON),
+    ;
+
+    companion object {
+        fun findBy(term: String): List<Province> =
+            (listOfNotNull(ofLabel(term)) + byTerm(term)).distinct()
+
+        fun ofSlug(slug: String): Province? = values().firstOrNull { it.slug.equals(slug, ignoreCase = true) }
+
+        private fun ofLabel(label: String): Province? = values().firstOrNull { it.label.equals(label, ignoreCase = true) }
+
+        private fun byTerm(term: String): List<Province> = values().filter { it.label.startsWith(term, ignoreCase = true) }
+    }
 }
