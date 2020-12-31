@@ -2,3 +2,13 @@ server:
   port: 8080
 pebble:
   cache: true
+spring:
+  web:
+    resources:
+      chain:
+        enabled: true
+        cache: true
+      add-mappings: true
+      cache:
+        cachecontrol:
+          max-age: 365d
