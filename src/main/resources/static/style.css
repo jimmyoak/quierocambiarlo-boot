@@ -1,12 +1,12 @@
 html, body {
     width: 100%;
     height: 100%;
-    font-family: 'Open Sans' !important;
+    font-family: 'Open Sans', Roboto, 'Helvetica Neue' !important;
     margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar-brand {
-    font-family: 'Montserrat' !important;
+    font-family: 'Montserrat', Roboto, 'Helvetica Neue' !important;
 }
 
 a.navbar-brand {
