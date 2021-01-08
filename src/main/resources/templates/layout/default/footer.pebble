@@ -1,10 +1,9 @@
-<div class="mb-4">Síguenos en:</div>
-<a href="https://www.instagram.com/quiero.cambiarlo/" target="_blank" class="text-decoration-none m-1 text-primary">
-    <i class="fab fa-instagram display-4 align-middle"></i>
+<div class="h6">Síguenos en:</div>
+<a href="https://www.instagram.com/quiero.cambiarlo/" target="_blank" class="d-block text-decoration-none m-1 text-primary">
+    <i class="fab fa-instagram align-middle" style="font-size: 1.5rem"></i>
     Instagram
 </a>
-<a href="https://www.facebook.com/QuieroCambiarlo-105305711454002" target="_blank"
-   class="text-decoration-none m-1 text-blue">
-    <i class="fab fa-facebook display-4 align-middle"></i>
+<a href="https://www.facebook.com/QuieroCambiarlo-105305711454002" target="_blank" class="d-block text-decoration-none m-1 text-blue">
+    <i class="fab fa-facebook align-middle" style="font-size: 1.5rem"></i>
     Facebook
 </a>

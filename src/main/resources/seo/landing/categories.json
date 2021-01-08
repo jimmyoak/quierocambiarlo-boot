@@ -1,5 +1,6 @@
 [
   {
+    "id": "CARS",
     "name": "Coches",
     "slug": "coches-de-segunda-mano",
     "title": "Trueques y cambios de coches de segunda mano",
@@ -22,6 +23,7 @@
     ]
   },
   {
+    "id": "MOTORCYCLES",
     "name": "Motos",
     "slug": "motos-de-segunda-mano",
     "title": "Trueques y cambios de motos de segunda mano",
@@ -44,6 +46,7 @@
     ]
   },
   {
+    "id": "BICYCLES",
     "name": "Bicicletas",
     "slug": "bicicletas-de-segunda-mano",
     "title": "Trueques y cambios de bicicletas de segunda mano",
@@ -66,6 +69,7 @@
     ]
   },
   {
+    "id": "MOBILE_PHONES",
     "name": "Móviles",
     "slug": "moviles-de-segunda-mano",
     "title": "Trueques y cambios de móviles de segunda mano",
@@ -88,6 +92,7 @@
     ]
   },
   {
+    "id": "MOTOR",
     "name": "Motor",
     "slug": "motor-de-segunda-mano",
     "title": "Trueques y cambios de motor, coches, motos y furgonetas de segunda mano",
@@ -113,6 +118,7 @@
     ]
   },
   {
+    "id": "FASHION",
     "name": "Moda",
     "slug": "moda-de-segunda-mano",
     "title": "Trueques y cambios de moda, ropa, accesorios y complementos de segunda mano",

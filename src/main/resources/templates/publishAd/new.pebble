@@ -1,0 +1,86 @@
+{% extends 'layout/base' %}
+{% block title %}Publica tu anuncio de intercambio, trueque o cambio{% endblock %}
+{% set seo = {
+    'canonical': url('/publicar-anuncio'),
+    'description': 'Publica tu anuncio de intercambio, trueque o cambio. Cambia coches, motos, móviles, bicicletas o cualquier cosa que tengas por casa',
+    'keywords': 'cambiar, trueque, quiero cambiar, intercambio, anuncios clasificados, publicar, publicar anuncio, propon un cambio'
+} %}
+{% set openGraph = {
+    'title': 'Publica tu anuncio de intercambio, trueque o cambio',
+    'description': 'Publica tu anuncio de intercambio, trueque o cambio. Cambia coches, motos, móviles, bicicletas o cualquier cosa que tengas por casa',
+    'url': url('/publicar-anuncio'),
+    'image': url('/logo.png'),
+    'type': 'website'
+} %}
+
+{% block content %}
+    <main class="py-3">
+    <form action="#" class="container col-12 col-md-4">
+        <fieldset class="form-group">
+            <div class="form-group">
+                <label for="input_title" class="h4">¿Qué quieres cambiar?</label>
+                <input type="text" id="input_title" name="title" required class="form-control" minlength="5"
+                       maxlength="100">
+                <small class="form-text text-muted">Ejemplos: Iphone X, Seat Ibiza, Yamaha X-Max,...</small>
+            </div>
+
+            <div class="form-group">
+                <label for="input_category">Categoría</label>
+                <select id="input_category" name="category" required class="form-control">
+                    <option hidden selected></option>
+                    {% for category in categories %}
+                        <option value="{{ category.id }}">{{ category.name }}</option>
+                    {% endfor %}
+                </select>
+                <small class="form-text text-muted">Indica en qué categoría quieres publicar.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="input_location">Provincia</label>
+                <select id="input_location" name="province" required class="form-control">
+                    <option hidden selected></option>
+                    {% for province in provinces %}
+                        <option value="{{ province.value }}">{{ province.label }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input_description">Descríbelo</label>
+                <textarea id="input_description" name="description" required class="form-control" rows="4"
+                          minlength="20" maxlength="300">
+                </textarea>
+                <small class="form-text text-muted">Explica, por ejemplo, en qué estado se encuentra o de qué color es.</small>
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="form-group">
+                <label for="input_interested_on" class="h4">¿Qué te interesa a cambio?</label>
+                <textarea id="input_interested_on" name="interested_on" required class="form-control" rows="4"
+                          minlength="20"
+                          maxlength="300"></textarea>
+                <small class="form-text text-muted">Una scooter, una moto deportiva, un SUV, una camiseta,...</small>
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <legend>Forma de contacto</legend>
+            <div class="form-group">
+                <label for="input_advertiser_name">Nombre</label>
+                <input type="email" id="input_advertiser_name" name="advertiser_name" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="input_advertiser_email">Email</label>
+                <input type="email" id="input_advertiser_email" name="advertiser_email" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="input_advertiser_phone">Teléfono</label>
+                <input type="tel" id="input_advertiser_phone" name="advertiser_phone" class="form-control">
+                <small class="form-text text-muted">Este dato es opcional, aunque es una forma muy rápida de contacto.</small>
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <input type="submit" name="publish" value="Publicar" class="form-control btn btn-warning">
+        </fieldset>
+    </form>
+    </main>
+{% endblock %}

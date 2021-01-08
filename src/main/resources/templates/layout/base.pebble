@@ -5,20 +5,21 @@
     {% include './default/meta' %}
     {% include './default/favicon' %}
     {% include './default/style' %}
+    {% include './default/script' %}
 
     {% include './default/head_seo' %}
     {% include './open_graph' %}
 
     <title>{% block title %}QuieroCambiarlo - Haz trueques. Cambia coches, motos, bicis y móviles{% endblock %}</title>
 </head>
-<body class="bg-light">
+<body>
 <header>
     {% block header %}{% include './default/header' %}{% endblock %}
 </header>
 
 {% block content %}{% endblock %}
 
-<footer class="text-center mb-4">
+<footer class="border-top border-secondary text-center mt-4 p-4">
     {% block footer %}{% include './default/footer' %}{% endblock %}
 </footer>
 </body>
