@@ -16,5 +16,4 @@
 {% block content %}
     {% include './jumbotron' %}
     {% include './categories' %}
-    {% include './instagram_widget' %}
 {% endblock %}
