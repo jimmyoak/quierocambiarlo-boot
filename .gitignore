@@ -1,5 +1,6 @@
 .idea
 .gradle
+.docker
 build
 out
 .DS_Store

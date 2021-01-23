@@ -1,4 +1,4 @@
-package es.quierocambiarlo.boot.controller
+package es.quierocambiarlo.boot.controller.web
 
 import es.quierocambiarlo.boot.view.model.MenuCategory
 import es.quierocambiarlo.boot.view.model.Seo

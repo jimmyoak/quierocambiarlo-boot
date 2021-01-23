@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  database:
+    image: postgres:13.1-alpine
+    ports:
+      - '5432:5432'
+    volumes:
+      - './.docker/postgres/etc:/etc/postgresql'
+      - './.docker/postgres/log:/var/log/postgresql'
+      - './.docker/postgres/data:/var/lib/postgresql/data'
+    environment:
+      POSTGRES_USER: basic
+      POSTGRES_PASSWORD: 9HHPU4Xur2KzewASuSbpkv
+      POSTGRES_DB: main

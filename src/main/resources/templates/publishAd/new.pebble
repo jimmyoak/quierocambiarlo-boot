@@ -14,7 +14,7 @@
 } %}
 
 {% block content %}
-    <main class="py-3">
+    <main id="insertion-content" class="py-3">
         <form id="form_publish" action="/publicar-anuncio" method="post" enctype="multipart/form-data"
               class="container col-12 col-lg-4">
             <fieldset class="form-group">
@@ -98,7 +98,8 @@
                 <legend class="h4 text-primary">Forma de contacto</legend>
                 <div class="form-group">
                     <label for="input_advertiser_name">Nombre</label>
-                    <input type="text" id="input_advertiser_name" name="advertiser_name" required class="form-control">
+                    <input type="text" id="input_advertiser_name" name="advertiser_name" required class="form-control"
+                           minlength="3" maxlength="50">
                 </div>
                 <div class="form-group">
                     <label for="input_advertiser_email">Email</label>
@@ -107,7 +108,8 @@
                 </div>
                 <div class="form-group">
                     <label for="input_advertiser_phone">Teléfono</label>
-                    <input type="tel" id="input_advertiser_phone" name="advertiser_phone" class="form-control">
+                    <input type="tel" id="input_advertiser_phone" name="advertiser_phone" class="form-control" min="9"
+                           max="12">
                     <small class="form-text text-muted">Este dato es opcional, aunque es una forma muy rápida de contacto.</small>
                 </div>
             </fieldset>
@@ -116,6 +118,17 @@
             </fieldset>
         </form>
     </main>
+    <script id="success-content" type="text/template">
+        <div class="container col-12 col-lg-4 text-center">
+            <div class="h1 display-1">
+                <i class="far fa-check-circle text-success"></i>
+            </div>
+            <div class="h3 mb-4">
+                ¡Ya hemos creado tu anuncio!<br/>
+            </div>
+            <a href="/" class="btn btn-primary">Volver al inicio</a>
+        </div>
+    </script>
 {% endblock %}
 {% block extraScripts %}
     {% verbatim %}
@@ -193,18 +206,31 @@
               .map(container => container.dataset.name)
 
             const formData = new FormData(onSubmit.target)
-
+            onSubmit.target.disabled = true
             pictureNames.forEach(pictureName => {
                 const file = fileByNameFrom(pictures.files, pictureName)
                 formData.append('pictures', file)
             })
 
             const request = new XMLHttpRequest()
-            request.open('POST', '/publicar-anuncio')
+            request.open('POST', '/api/v1/ads')
             request.send(formData)
-
+            request.onreadystatechange = () => {
+                if (request.readyState === XMLHttpRequest.DONE) {
+                    if (httpStatusIsSuccess(request.status)) {
+                        const content = document.getElementById('insertion-content')
+                        content.innerHTML = document.getElementById('success-content').innerHTML
+                    } else {
+                        onSubmit.target.disabled = false
+                    }
+                }
+            }
             return false
         })
+
+        function httpStatusIsSuccess(status) {
+            return status >= 200 && status <= 299
+        }
 
         function fileByNameFrom(files, name) {
             for(const file of files) {

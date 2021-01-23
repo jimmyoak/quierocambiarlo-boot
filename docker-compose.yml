@@ -19,3 +19,13 @@ services:
     ports:
       - '80:80'
       - '443:443'
+  database:
+    image: postgres:13.1-alpine
+    volumes:
+      - './.docker/postgres/etc:/etc/postgresql'
+      - './.docker/postgres/log:/var/log/postgresql'
+      - './.docker/postgres/data:/var/lib/postgresql/data'
+    environment:
+      POSTGRES_USER: basic
+      POSTGRES_PASSWORD: 9HHPU4Xur2KzewASuSbpkv
+      POSTGRES_DB: main
