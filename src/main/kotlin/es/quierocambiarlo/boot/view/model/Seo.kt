@@ -1,8 +1,10 @@
 package es.quierocambiarlo.boot.view.model
 
+import es.quierocambiarlo.boot.domain.ad.CategoryId
 import es.quierocambiarlo.boot.url.DomainUrlGenerator
 
 data class Seo(
+    val id: CategoryId,
     val slug: String,
     val title: String,
     val h1: String,

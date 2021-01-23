@@ -2,6 +2,8 @@ package es.quierocambiarlo.boot.infrastructure.user
 
 import es.quierocambiarlo.boot.domain.user.User
 import es.quierocambiarlo.boot.domain.user.UserRepository
+import es.quierocambiarlo.boot.infrastructure.r2dbc.nonNull
+import es.quierocambiarlo.boot.infrastructure.r2dbc.nullable
 import io.r2dbc.spi.Row
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.reactive.awaitSingleOrNull
@@ -54,5 +56,3 @@ class R2dbcUserRepository(private val database: DatabaseClient) : UserRepository
     }
 }
 
-private inline fun <reified T> Row.nonNull(name: String): T = this.get(name, T::class.java)!!
-private inline fun <reified T> Row.nullable(name: String): T? = this.get(name, T::class.java)

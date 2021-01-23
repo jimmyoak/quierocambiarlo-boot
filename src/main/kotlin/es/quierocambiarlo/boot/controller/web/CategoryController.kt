@@ -1,5 +1,6 @@
 package es.quierocambiarlo.boot.controller.web
 
+import es.quierocambiarlo.boot.domain.ad.AdRepository
 import es.quierocambiarlo.boot.view.model.MenuCategory
 import es.quierocambiarlo.boot.view.model.Seo
 import org.springframework.http.HttpStatus
@@ -13,15 +14,17 @@ import org.springframework.web.bind.annotation.ResponseStatus
 @Controller
 class CategoryController(
     private val categoriesSeo: Map<String, Seo>,
-    private val menuCategories: List<MenuCategory>
+    private val menuCategories: List<MenuCategory>,
+    private val adRepository: AdRepository
 ) {
     @GetMapping("/trueques-de-{slug:[\\w-]+}.html")
-    fun landing(@PathVariable slug: String, model: Model): String {
+    suspend fun landing(@PathVariable slug: String, model: Model): String {
         val seo = categoriesSeo[slug] ?: throw CategorySlugNotFoundException()
 
         model["seo"] = seo
         model["openGraph"] = seo.toOpenGraph()
         model["menuCategories"] = menuCategoriesWithActive(slug)
+        model["results"] = adRepository.findAllBy(seo.id)
 
         return "landing/category/index"
     }
