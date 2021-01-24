@@ -4,5 +4,6 @@
 {% block content %}
     {% include './jumbotron' %}
     {% include './categories_menu' %}
+    {% include './results' %}
     {% include './category_seo' %}
 {% endblock %}

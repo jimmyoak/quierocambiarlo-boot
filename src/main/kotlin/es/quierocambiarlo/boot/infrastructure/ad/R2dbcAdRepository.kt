@@ -3,6 +3,7 @@ package es.quierocambiarlo.boot.infrastructure.ad
 import es.quierocambiarlo.boot.domain.ad.Ad
 import es.quierocambiarlo.boot.domain.ad.AdRepository
 import es.quierocambiarlo.boot.domain.ad.CategoryId
+import es.quierocambiarlo.boot.domain.location.Province
 import es.quierocambiarlo.boot.infrastructure.r2dbc.nonNull
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.Flow
@@ -20,7 +21,18 @@ ON CONFLICT(id) DO UPDATE SET id = :id, title = :title, category = :category::AD
 
 @Language("PostgreSQL")
 private const val SELECT_ALL_BY_CATEGORY_ID =
-    """SELECT * FROM ads WHERE category = :category"""
+    """SELECT id,
+       id,
+       title,
+       category::VARCHAR,
+       province::VARCHAR,
+       description,
+       interested_on,
+       pictures,
+       user_id,
+       created_at
+FROM ads
+WHERE category = :category::AD_CATEGORY"""
 
 @Repository
 class ReactiveAdRepository(val database: DatabaseClient) : AdRepository {
@@ -48,8 +60,8 @@ class ReactiveAdRepository(val database: DatabaseClient) : AdRepository {
                 Ad(
                     row.nonNull("id"),
                     row.nonNull("title"),
-                    row.nonNull("category"),
-                    row.nonNull("province"),
+                    row.nonNull<String>("category").let(CategoryId::valueOf),
+                    row.nonNull<String>("province").let(Province::valueOf),
                     row.nonNull("description"),
                     emptyList(),
                     row.nonNull("interested_on"),

@@ -1,0 +1,23 @@
+<div class="container row mx-auto">
+    {% for result in results %}
+{#        {% set imgsrc = result.pictures[0] | default('https://picsum.photos/300/300?random=' + loop.index) %}#}
+         {% set imgsrc = result.pictures[0] | default('/no-picture.png') %}
+        <div class="col-6 col-md-4 col-xl-3 my-4">
+            <div class="position-relative">
+                <img src="{{ imgsrc }}" alt="Foto {{ loop.index + 1 }} de {{ result.title }}"
+                     class="border border-light rounded img-fluid">
+                <div class="position-absolute my-2" style="top:0;left:0">
+                    <small class="bg-light text-dark p-1 rounded-right">
+                        <i class="fas fa-map-marker-alt mr-1"></i>{{ result.province.label }}
+                    </small>
+                </div>
+            </div>
+            <div class="p-0 p-md-1">
+                <a href="#" class="d-block h6 my-1 text-dark text-decoration-none stretched-link text-truncate">
+                    {{ result.title }}
+                </a>
+                <small class="d-block text-truncate">Cambio por {{ result.interestedOn }}</small>
+            </div>
+        </div>
+    {% endfor %}
+</div>

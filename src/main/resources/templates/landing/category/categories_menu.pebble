@@ -1,12 +1,11 @@
-<section class="container text-left p-4">
-    <div class="row">
-        <div class="col-12 col-md-3">
-            {% for menuCategory in menuCategories %}
-                <a href="/trueques-de-{{ menuCategory.slug }}.html" class="btn btn-block btn-outline-secondary my-1 {{ menuCategory.active ? 'active' : '' }}">
-                    <i class="fa {{ menuCategory.icon }} display-4 d-block"></i>
-                    <h5 class="card-title m-0">{{ menuCategory.name }}</h5>
-                </a>
-            {% endfor %}
-        </div>
+<section class="container my-4">
+    <div class="d-flex flex-wrap justify-content-center">
+        {% for menuCategory in menuCategories %}
+            <a href="/trueques-de-{{ menuCategory.slug }}.html"
+               class="btn btn-outline-secondary border-0 {{ menuCategory.active ? 'active' : '' }}">
+                <i class="fa {{ menuCategory.icon }} mr-2"></i>
+                <h4 class="h6 m-0 d-inline-block align-middle">{{ menuCategory.name }}</h4>
+            </a>
+        {% endfor %}
     </div>
 </section>

@@ -1,4 +1,4 @@
-<section class="jumbotron jumbotron-fluid jumbotron-home">
+<section class="jumbotron jumbotron-fluid jumbotron-home m-0">
     <div class="container">
         <h2>{{ seo.h2 }}</h2>
         <p class="lead">Próximamente</p>
