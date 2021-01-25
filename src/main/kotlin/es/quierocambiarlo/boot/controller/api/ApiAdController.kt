@@ -1,6 +1,8 @@
 package es.quierocambiarlo.boot.controller.api
 
 import es.quierocambiarlo.boot.domain.ad.Ad
+import es.quierocambiarlo.boot.domain.ad.AdPicture
+import es.quierocambiarlo.boot.domain.ad.AdPictureUploader
 import es.quierocambiarlo.boot.domain.ad.AdRepository
 import es.quierocambiarlo.boot.domain.ad.CategoryId
 import es.quierocambiarlo.boot.domain.location.Province
@@ -25,14 +27,16 @@ import javax.validation.constraints.Size
 @RestController
 class ApiAdController(
     private val adRepository: AdRepository,
-    private val userRepository: UserRepository
+    private val userRepository: UserRepository,
+    private val adPictureUploader: AdPictureUploader
 ) {
     @PostMapping("/api/v1/ads", produces = [MediaType.APPLICATION_JSON_VALUE])
     @Transactional
     @ResponseStatus(HttpStatus.CREATED)
     suspend fun publish(@Valid @ModelAttribute formData: PublishAdFormData): Map<String, UUID> = coroutineScope {
         val user = userRepository.findByEmail(formData.advertiser_email) ?: createUserFrom(formData)
-        val ad = createAdFrom(formData, user.id)
+        val uploadedPictures = formData.pictures.map { adPictureUploader.upload(it) }
+        val ad = createAdFrom(formData, user.id, uploadedPictures)
 
         val persistUser = async { userRepository.save(user) }
         val persistAd = async { adRepository.save(ad) }
@@ -47,13 +51,13 @@ class ApiAdController(
             phone = formData.advertiser_phone
         )
 
-    private fun createAdFrom(formData: PublishAdFormData, advertiserId: UUID): Ad =
+    private fun createAdFrom(formData: PublishAdFormData, advertiserId: UUID, uploadedPictures: List<AdPicture>): Ad =
         Ad(
             title = formData.title,
             categoryId = formData.category,
             province = formData.province,
             description = formData.description,
-            pictures = emptyList(),
+            pictures = uploadedPictures,
             interestedOn = formData.interested_on,
             advertiserId = advertiserId
         )

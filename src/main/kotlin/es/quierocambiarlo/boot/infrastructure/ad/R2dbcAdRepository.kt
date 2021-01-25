@@ -1,6 +1,9 @@
 package es.quierocambiarlo.boot.infrastructure.ad
 
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import es.quierocambiarlo.boot.domain.ad.Ad
+import es.quierocambiarlo.boot.domain.ad.AdPicture
 import es.quierocambiarlo.boot.domain.ad.AdRepository
 import es.quierocambiarlo.boot.domain.ad.CategoryId
 import es.quierocambiarlo.boot.domain.location.Province
@@ -35,7 +38,10 @@ FROM ads
 WHERE category = :category::AD_CATEGORY"""
 
 @Repository
-class ReactiveAdRepository(val database: DatabaseClient) : AdRepository {
+class ReactiveAdRepository(
+    private val database: DatabaseClient,
+    private val objectMapper: ObjectMapper
+) : AdRepository {
     override suspend fun save(ad: Ad): Ad = coroutineScope {
         database.sql(UPSERT_AD)
             .bind("id", ad.id)
@@ -44,7 +50,7 @@ class ReactiveAdRepository(val database: DatabaseClient) : AdRepository {
             .bind("province", ad.province.name)
             .bind("description", ad.description)
             .bind("interestedOn", ad.interestedOn)
-            .bind("pictures", "[]")
+            .bind("pictures", objectMapper.writeValueAsString(ad.pictures))
             .bind("userId", ad.advertiserId)
             .bind("createdAt", ad.createdAt)
             .then()
@@ -63,7 +69,7 @@ class ReactiveAdRepository(val database: DatabaseClient) : AdRepository {
                     row.nonNull<String>("category").let(CategoryId::valueOf),
                     row.nonNull<String>("province").let(Province::valueOf),
                     row.nonNull("description"),
-                    emptyList(),
+                    objectMapper.readValue(row.nonNull<String>("pictures")),
                     row.nonNull("interested_on"),
                     row.nonNull("user_id"),
                     row.nonNull("created_at")

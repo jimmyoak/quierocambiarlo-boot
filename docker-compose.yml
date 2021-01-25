@@ -6,6 +6,7 @@ services:
     working_dir: '/app'
     volumes:
       - "./build/libs:/app"
+      - "./.uploads/ads:/application/uploads/ads"
     entrypoint: [ 'java' ,'-jar', '-Duser.timezone=UTC' ,'app.jar' ]
     environment:
       - SPRING_PROFILES_ACTIVE=pro

@@ -1,2 +1,7 @@
 pebble:
   cache: false
+
+application:
+  ads:
+    pictures:
+      path: '.uploads/ads/'
