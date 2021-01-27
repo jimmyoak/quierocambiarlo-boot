@@ -35,7 +35,8 @@ private const val SELECT_ALL_BY_CATEGORY_ID =
        user_id,
        created_at
 FROM ads
-WHERE category = :category::AD_CATEGORY"""
+WHERE category = :category::AD_CATEGORY
+ORDER BY created_at DESC"""
 
 @Repository
 class ReactiveAdRepository(
