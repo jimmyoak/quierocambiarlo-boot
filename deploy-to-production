@@ -20,6 +20,6 @@ then
     if [ $? -ne 0 ]; then exit 3; fi
     scp ./docker-compose.yml root@64.227.124.134:/home/quierocambiarlo/docker-compose.yml
     if [ $? -ne 0 ]; then exit 4; fi
-    ssh root@64.227.124.134 'cd /home/quierocambiarlo && docker-compose stop proxy application && mv ./build/libs/app_new.jar ./build/libs/app.jar && docker-compose up -d proxy application'
+    ssh root@64.227.124.134 'cd /home/quierocambiarlo && docker-compose stop application && mv ./build/libs/app_new.jar ./build/libs/app.jar && docker-compose up -d application'
     if [ $? -ne 0 ]; then exit 5; fi
 fi

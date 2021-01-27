@@ -13,7 +13,7 @@ spring:
         cachecontrol:
           max-age: 365d
   r2dbc:
-    url: 'r2dbc:postgresql://127.0.0.1:5432/main'
+    url: 'r2dbc:postgresql://database:5432/main'
     username: basic
     password: 9HHPU4Xur2KzewASuSbpkv
 

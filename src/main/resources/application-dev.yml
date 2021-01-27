@@ -5,3 +5,9 @@ application:
   ads:
     pictures:
       path: '.uploads/ads/'
+
+spring:
+  r2dbc:
+    url: 'r2dbc:postgresql://127.0.0.1:5432/main'
+    username: basic
+    password: 9HHPU4Xur2KzewASuSbpkv
