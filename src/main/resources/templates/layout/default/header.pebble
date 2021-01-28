@@ -1,6 +1,6 @@
 <nav class="navbar bg-white text-primary">
     <a href="/" class="navbar-brand">
-        <img src="/logo.png" alt="QuieroCambiarlo" class="navbar-brand-logo mr-4">
+        <img src="/logo.png" alt="QuieroCambiarlo" class="navbar-brand-logo mr-4" width="54" height="54">
         <span class="navbar-brand m-0 p-0">QuieroCambiarlo</span>
     </a>
 </nav>
