@@ -114,7 +114,12 @@
                 </div>
             </fieldset>
             <fieldset class="form-group">
-                <input type="submit" name="publish" value="Publicar" class="form-control btn btn-primary">
+                <button type="submit" class="form-control btn btn-primary">
+                    <span class="not-loading">Publicar</span>
+                    <div class="d-none spinner-border text-white mx-auto" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </button>
             </fieldset>
         </form>
     </main>
@@ -207,6 +212,7 @@
 
             const formData = new FormData(onSubmit.target)
             onSubmit.target.disabled = true
+            onSubmit.target.classList.add('form-loading')
             pictureNames.forEach(pictureName => {
                 const file = fileByNameFrom(pictures.files, pictureName)
                 formData.append('pictures', file)
@@ -222,8 +228,13 @@
                         content.innerHTML = document.getElementById('success-content').innerHTML
                     } else {
                         onSubmit.target.disabled = false
+                        onSubmit.target.classList.remove('form-loading')
                     }
                 }
+            }
+            request.onerror = () => {
+                onSubmit.target.disabled = false
+                onSubmit.target.classList.remove('form-loading')
             }
             return false
         })

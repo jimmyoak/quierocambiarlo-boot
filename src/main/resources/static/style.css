@@ -67,3 +67,10 @@ a.navbar-brand {
 .pictures-container .draggable-item:first-child .picture-container img {
     border-color: #B22562;
 }
+
+form.form-loading button[type=submit] .not-loading {
+    display: none;
+}
+form.form-loading button[type=submit] .spinner-border {
+    display: block !important;
+}
