@@ -136,6 +136,7 @@
     </script>
 {% endblock %}
 {% block extraScripts %}
+    <script src="/load-image.js"></script>
     {% verbatim %}
     <script>
         const inputPicturesPreview = document.getElementById('input_pictures_preview')
@@ -169,16 +170,6 @@
             container.innerHTML += template.innerHTML.replace('{{ src }}', src).replace('{{ name }}', file.name)
         }
 
-        function createInputFile(file) {
-            const input = document.createElement('input')
-            input.type = 'file'
-            input.name = 'pictures'
-            input.hidden = true
-            input.files[0] = file
-
-            return input
-        }
-
         document.querySelectorAll('[data-behaviour=length][data-for]')
             .forEach(component => {
                 const input = document.getElementById(component.dataset.for)
@@ -202,7 +193,7 @@
 
 
         const formPublish = document.getElementById('form_publish')
-        formPublish.addEventListener('submit', onSubmit => {
+        formPublish.addEventListener('submit', async (onSubmit) => {
             onSubmit.preventDefault()
 
             const pictures = document.getElementById('input_pictures')
@@ -213,15 +204,23 @@
             const formData = new FormData(onSubmit.target)
             onSubmit.target.disabled = true
             onSubmit.target.classList.add('form-loading')
-            pictureNames.forEach(pictureName => {
+            for (const pictureName of pictureNames) {
                 const file = fileByNameFrom(pictures.files, pictureName)
-                formData.append('pictures', file)
-            })
+                const scaled = await loadImage(file, {maxWidth: 1920, maxHeight: 1920, canvas: true})
+                const blob = await new Promise(resolve => scaled.image.toBlob(data => resolve(data), 'image/jpeg'))
+                formData.append('pictures', blob, pictureName)
+            }
 
             const request = new XMLHttpRequest()
             request.open('POST', '/api/v1/ads')
             request.send(formData)
-            request.onreadystatechange = () => {
+            request.onreadystatechange = onSubmitReadyStateChangeWith(request, onSubmit)
+            request.onerror = onSubmitError
+            return false
+        })
+
+        function onSubmitReadyStateChangeWith(request, onSubmit) {
+            return () => {
                 if (request.readyState === XMLHttpRequest.DONE) {
                     if (httpStatusIsSuccess(request.status)) {
                         const content = document.getElementById('insertion-content')
@@ -232,12 +231,12 @@
                     }
                 }
             }
-            request.onerror = () => {
-                onSubmit.target.disabled = false
-                onSubmit.target.classList.remove('form-loading')
-            }
-            return false
-        })
+        }
+
+        function onSubmitError(onSubmit) {
+            onSubmit.target.disabled = false
+            onSubmit.target.classList.remove('form-loading')
+        }
 
         function httpStatusIsSuccess(status) {
             return status >= 200 && status <= 299
