@@ -26,7 +26,9 @@ class AdController(
         model: Model
     ): String {
         LOGGER.info("Fetching $slug: $adId")
-        val ad = adRepository.findById(adId).orNotFound()
+        val ad = adRepository.findById(adId).orNotFound().let{ ad ->
+            ad.copy(pictures = ad.pictures.map { it.copy(path = "/adp/${it.path}") })
+        }
         val user = userRepository.findById(ad.advertiserId).orNotFound()
 
         model["ad"] = ad

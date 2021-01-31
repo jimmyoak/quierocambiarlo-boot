@@ -1,0 +1,27 @@
+<section id="media_gallery" class="carousel slide rounded overflow-hidden"
+         data-interval="false" data-ride="carousel" style="max-height:80vh">
+    <ol class="carousel-indicators m-1">
+        {% for picture in ad.pictures %}
+            <li data-target="#media_gallery"
+                data-slide-to="{{ loop.index }}"
+                class="{{ loop.first ? 'active' : '' }}"></li>
+        {% endfor %}
+    </ol>
+    <div class="carousel-inner">
+        {% for picture in ad.pictures %}
+            <div class="carousel-item {{ loop.first ? 'active' : '' }}" style="object-position: center">
+                <img src="{{ picture.path }}"
+                     alt="Foto {{ loop.index + 1 }} de {{ ad.title }}"
+                     class="d-block w-100">
+            </div>
+        {% endfor %}
+    </div>
+    <a class="carousel-control-prev d-none d-md-flex" href="#media_gallery" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next d-none d-md-flex" href="#media_gallery" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+</section>

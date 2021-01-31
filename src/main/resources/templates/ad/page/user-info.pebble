@@ -1,0 +1,17 @@
+<div class="border rounded p-3">
+    <div class="mb-3">
+        <i class="fa fa-user-circle h1 my-0 mr-2 text-muted align-middle"></i>
+        {{ user.name }}
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <a href="#" class="btn btn-block btn-primary"><i class="far fa-comment-dots"></i> Contactar</a>
+        </div>
+        <div class="col-6">
+            {% if user.phone is not empty %}
+                <a href="tel:{{ user.phone }}" class="btn btn-block btn-outline-primary">
+                    <i class="fas fa-phone-alt"></i> Llamar</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

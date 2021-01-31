@@ -1,0 +1,5 @@
+<h1 class="h4 text-wrap">{{ ad.title }}</h1>
+<p>{{ ad.description }}</p>
+<div class="d-inline-block border border-primary text-nowrap text-primary p-1 px-2 rounded-pill">
+    <i class="fas fa-map-marker-alt mr-2"></i>{{ ad.province.label }}
+</div>

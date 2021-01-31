@@ -15,7 +15,17 @@
 } %}
 
 {% block content %}
-    <section id="media_gallery">
-        <img src="{{ ad.pictures[0].path }}" alt="Foto 1 de {{ ad.title }}">
-    </section>
+    <main class="container">
+        <div class="row">
+            <div class="col-12 col-xl-8">
+                {% include './gallery' %}
+                <div class="my-3">
+                    {% include './ad-info' %}
+                </div>
+            </div>
+            <div class="col-12 col-xl-4">
+                {% include './user-info' %}
+            </div>
+        </div>
+    </main>
 {% endblock %}
