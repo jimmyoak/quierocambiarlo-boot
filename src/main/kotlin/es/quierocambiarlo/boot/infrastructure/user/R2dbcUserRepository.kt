@@ -12,9 +12,13 @@ import org.springframework.r2dbc.core.DatabaseClient
 import org.springframework.r2dbc.core.awaitSingleOrNull
 import org.springframework.r2dbc.core.bind
 import org.springframework.stereotype.Repository
+import java.util.UUID
 
 @Language("PostgreSQL")
 private const val SELECT_BY_EMAIL = "SELECT * FROM users WHERE email = :email"
+
+@Language("PostgreSQL")
+private const val SELECT_BY_ID = "SELECT * FROM users WHERE id = :id"
 
 @Language("PostgreSQL")
 private const val UPSERT_USER =
@@ -33,15 +37,13 @@ class R2dbcUserRepository(private val database: DatabaseClient) : UserRepository
     override suspend fun findByEmail(email: String): User? =
         database.sql(SELECT_BY_EMAIL)
             .bind("email", email)
-            .map { row ->
-                User.NonRegistered(
-                    row.nonNull("id"),
-                    row.nonNull("name"),
-                    row.nonNull("email"),
-                    row.nullable("phone"),
-                    row.nonNull("created_at")
-                )
-            }
+            .map(::createUser)
+            .awaitSingleOrNull()
+
+    override suspend fun findById(id: UUID): User? =
+        database.sql(SELECT_BY_ID)
+            .bind("id", id)
+            .map(::createUser)
             .awaitSingleOrNull()
 
     suspend fun save(user: User.NonRegistered) {
@@ -54,5 +56,14 @@ class R2dbcUserRepository(private val database: DatabaseClient) : UserRepository
             .then()
             .awaitSingleOrNull()
     }
+
+    private fun createUser(row: Row): User =
+        User.NonRegistered(
+            row.nonNull("id"),
+            row.nonNull("name"),
+            row.nonNull("email"),
+            row.nullable("phone"),
+            row.nonNull("created_at")
+        )
 }
 

@@ -1,7 +1,7 @@
 <div class="container row mx-auto">
     {% for result in results %}
-{#        {% set imgsrc = result.pictures[0] | default('https://picsum.photos/300/300?random=' + loop.index) %}#}
-         {% set imgsrc = result.pictures[0].path | default('/no-picture.png') %}
+        {# {% set imgsrc = result.pictures[0] | default('https://picsum.photos/300/300?random=' + loop.index) %} #}
+        {% set imgsrc = result.pictures[0].path | default('/no-picture.png') %}
         <div class="col-6 col-md-4 col-xl-3 my-4">
             <div class="position-relative">
                 <img src="{{ imgsrc }}" alt="Foto {{ loop.index + 1 }} de {{ result.title }}"
@@ -13,7 +13,8 @@
                 </div>
             </div>
             <div class="p-0 p-md-1">
-                <a href="#" class="d-block h6 my-1 text-dark text-decoration-none stretched-link text-truncate">
+                {% set url = adUrl(result.id, result.title, result.province, result.interestedOn) %}
+                <a href="{{ url }}" class="d-block h6 my-1 text-dark text-decoration-none stretched-link text-truncate">
                     {{ result.title }}
                 </a>
                 <small class="d-block text-truncate">Cambio por {{ result.interestedOn }}</small>

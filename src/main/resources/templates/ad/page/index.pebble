@@ -1,0 +1,21 @@
+{% extends 'layout/base' %}
+{% block title %}Cambio {{ ad.title }} en {{ ad.province.label }}{% endblock %}
+{% set canonicalUrl = adCanonicalUrl(ad.id, ad.title, ad.province, ad.interestedOn) %}
+{% set seo = {
+    'canonical': canonicalUrl,
+    'description': ad.description,
+    'keywords': 'anuncio, intercambio, trueque, cambio, cambio por, ' + ad.title + ', ' + ad.province.label
+} %}
+{% set openGraph = {
+    'title': 'Cambio ' + ad.title + ' por ' + ad.interestedOn + ' en ' + ad.province.label,
+    'description': ad.description,
+    'url': canonicalUrl,
+    'image': url('/logo.png'),
+    'type': 'website'
+} %}
+
+{% block content %}
+    <section id="media_gallery">
+        <img src="{{ ad.pictures[0].path }}" alt="Foto 1 de {{ ad.title }}">
+    </section>
+{% endblock %}

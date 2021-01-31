@@ -35,6 +35,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+	implementation("com.github.slugify:slugify:2.4")
 	implementation("com.sksamuel.scrimage:scrimage-core:4.0.12")
 
 	implementation("io.r2dbc:r2dbc-postgresql")
