@@ -9,7 +9,7 @@
     </ol>
     <div class="carousel-inner">
         {% for picture in ad.pictures %}
-            <div class="carousel-item {{ loop.first ? 'active' : '' }}" style="object-position: center">
+            <div class="carousel-item {{ loop.first ? 'active' : '' }}">
                 <img src="{{ picture.path }}"
                      alt="Foto {{ loop.index + 1 }} de {{ ad.title }}"
                      class="d-block w-100">

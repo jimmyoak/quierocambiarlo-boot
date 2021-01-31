@@ -17,6 +17,9 @@
 {% block content %}
     <main class="container">
         <div class="row">
+            <div class="col-12">
+                {% include './breadcrumb' %}
+            </div>
             <div class="col-12 col-xl-8">
                 {% include './gallery' %}
                 <div class="my-3">

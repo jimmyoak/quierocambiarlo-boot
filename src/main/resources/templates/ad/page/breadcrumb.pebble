@@ -1,0 +1,7 @@
+<nav aria-label="breadcrumb small">
+    <ol class="breadcrumb my-2 p-0 bg-transparent small text-muted">
+        <li class="breadcrumb-item"><a class="text-decoration-none text-muted" href="/">Inicio</a></li>
+        <li class="breadcrumb-item"><a class="text-decoration-none text-muted" href="/trueques-de-{{ category.slug }}">{{ category.name }}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ ad.title }}</li>
+    </ol>
+</nav>

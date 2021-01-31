@@ -74,3 +74,11 @@ form.form-loading button[type=submit] .not-loading {
 form.form-loading button[type=submit] .spinner-border {
     display: block !important;
 }
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">" !important;
+}
+
+.carousel-item {
+    transition-duration: .2s;
+}
