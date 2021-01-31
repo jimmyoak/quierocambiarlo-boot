@@ -1,5 +1,6 @@
-<h1 class="h4 text-wrap">{{ ad.title }}</h1>
+<h1 class="h4 text-wrap text-primary">{{ ad.title }}</h1>
 <p>{{ ad.description }}</p>
-<div class="d-inline-block border border-primary text-nowrap text-primary p-1 px-2 rounded-pill">
+<p><span class="text-primary">¿Qué me interesa a cambio?</span> {{ ad.interestedOn }}</p>
+<div class="d-block text-nowrap text-right">
     <i class="fas fa-map-marker-alt mr-2"></i>{{ ad.province.label }}
 </div>
