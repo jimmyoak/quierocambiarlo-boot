@@ -5,7 +5,7 @@
         <p class="lead">Donde podrás encontrar todo lo que necesites e intercambiarlo.</p>
         <p>No pagues por lo que necesitas, cámbialo por lo que no usas.</p>
         <div class="text-center">
-            <a href="/publicar-anuncio.html" class="btn btn-warning btn-lg m-1 col-12 col-md-4"
+            <a href="/publicar-anuncio.html" class="btn btn-warning btn-lg my-1 col-12 col-md-4"
                rel="nofollow">Publicar anuncio</a>
         </div>
     </div>
