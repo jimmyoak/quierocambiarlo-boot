@@ -22,4 +22,7 @@ then
     if [ $? -ne 0 ]; then exit 4; fi
     ssh root@64.227.124.134 'cd /home/quierocambiarlo && docker-compose stop application && mv ./build/libs/app_new.jar ./build/libs/app.jar && docker-compose up -d application'
     if [ $? -ne 0 ]; then exit 5; fi
+    sleep 15
+    responseStatus=$(curl -s -o /dev/null -w "%{http_code}" https://www.quierocambiarlo.es)
+    if [ $responseStatus -ne 200 ]; then echo -e '\e[31m\e[1mERROR!!!'; else echo -e '\e[32m\e[1mOK!!!'; fi
 fi
