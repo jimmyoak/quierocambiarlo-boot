@@ -9,28 +9,7 @@
         </div>
         <div class="col-6">
             {% if user.phone is not empty %}
-                <a id="call_button" href="tel:{{ user.phone }}" class="btn btn-block btn-outline-primary">
-                    <i class="fas fa-phone-alt mr-1"></i> Llamar
-                </a>
-                {% verbatim %}
-                <script id="phone_number_button" type="text/template">
-                    <button disabled class="btn btn-block btn-outline-secondary">
-                        <i class="fas fa-phone-alt mr-1"></i> {{ phone }}
-                    </button>
-                </script>
-                <script>
-                    const callButton = document.getElementById('call_button')
-                    callButton.addEventListener('click', onClick => {
-                        if (window.innerWidth >= 768) {
-                            onClick.preventDefault()
-                            callButton.outerHTML =
-                                document.getElementById('phone_number_button')
-                                    .innerHTML
-                                    .replace('{{ phone }}', callButton.href.replace('tel:', ''))
-                        }
-                    })
-                </script>
-                {% endverbatim %}
+                {% include './user-info-phone' %}
             {% endif %}
         </div>
     </div>
