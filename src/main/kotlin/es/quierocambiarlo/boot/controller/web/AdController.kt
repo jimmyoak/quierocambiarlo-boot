@@ -4,17 +4,13 @@ import es.quierocambiarlo.boot.domain.ad.AdRepository
 import es.quierocambiarlo.boot.domain.ad.orNotFound
 import es.quierocambiarlo.boot.domain.user.UserRepository
 import es.quierocambiarlo.boot.domain.user.orNotFound
-import es.quierocambiarlo.boot.infrastructure.logger.logger
 import es.quierocambiarlo.boot.view.model.MenuCategory
-import es.quierocambiarlo.boot.view.model.Seo
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.ui.set
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import java.util.UUID
-
-private val LOGGER = logger<AdController>()
 
 @Controller
 class AdController(
@@ -28,7 +24,6 @@ class AdController(
         @PathVariable adId: UUID,
         model: Model
     ): String {
-        LOGGER.info("Fetching $slug: $adId")
         val ad = adRepository.findById(adId).orNotFound().let{ ad ->
             ad.copy(pictures = ad.pictures.map { it.copy(path = "/adp/${it.path}") })
         }

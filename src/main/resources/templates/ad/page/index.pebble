@@ -31,4 +31,5 @@
             </div>
         </div>
     </main>
+    {% include './contact-form' %}
 {% endblock %}
