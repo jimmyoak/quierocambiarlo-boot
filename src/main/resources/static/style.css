@@ -1,3 +1,10 @@
+:root {
+    --light-color: #FAFAFA;
+    --primary-color: #B22562;
+    --text-on-primary-color: #FFF;
+    --breadcrumb-separator: ">";
+}
+
 html, body {
     width: 100%;
     height: 100%;
@@ -10,38 +17,38 @@ a.navbar-brand {
 }
 
 .bg-light {
-    background-color: #FAFAFA !important;
+    background-color: var(--light-color) !important;
 }
 
 .bg-primary {
-    background-color: #B22562 !important;
+    background-color: var(--primary-color) !important;
 }
 
 .btn-primary {
-    color: #FFF;
-    background-color: #B22562 !important;
-    border-color: #B22562 !important;
+    color: var(--text-on-primary-color);
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
 }
 
 .border-primary {
-    border-color: #B22562 !important;
+    border-color: var(--primary-color) !important;
 }
 
 .btn-outline-primary {
-    color: #B22562 !important;
-    border-color: #B22562 !important;
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
 }
 
 .btn-outline-primary:hover,
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .btn-outline-primary:not(:disabled):not(.disabled):active {
-    color: #FFF !important;
-    background-color: #B22562 !important;
-    border-color: #B22562 !important;
+    color: var(--text-on-primary-color) !important;
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
 }
 
 .text-primary {
-    color: #B22562 !important;
+    color: var(--primary-color) !important;
 }
 
 .navbar-brand-logo {
@@ -49,8 +56,8 @@ a.navbar-brand {
 }
 
 .jumbotron-home {
-    background-color: #B22562;
-    color: #FFF;
+    background-color: var(--primary-color);
+    color: var(--text-on-primary-color);
 }
 
 .container-home-categories .btn {
@@ -66,7 +73,7 @@ a.navbar-brand {
 }
 
 .pictures-container .draggable-item:first-child .picture-container img {
-    border-color: #B22562;
+    border-color: var(--primary-color);
 }
 
 form.form-loading button[type=submit] .not-loading,
@@ -83,7 +90,7 @@ form.form-success button[type=submit] .success-icon {
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-    content: ">" !important;
+    content: var(--breadcrumb-separator) !important;
 }
 
 .carousel-item {
@@ -95,7 +102,7 @@ form.form-success button[type=submit] .success-icon {
     bottom: 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: var(--breakpoint-xl)) {
     .position-xl-relative {
         position: relative;
     }
@@ -105,10 +112,3 @@ form.form-success button[type=submit] .success-icon {
         top: 0;
     }
 }
-
-/*@media (min-width: 1200px) {*/
-/*    .sticky-bottom-xl-sticky-top {*/
-/*        position: sticky;*/
-/*        top: 0;*/
-/*    }*/
-/*}*/
