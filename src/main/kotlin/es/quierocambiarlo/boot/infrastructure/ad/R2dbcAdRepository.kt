@@ -14,6 +14,7 @@ import kotlinx.coroutines.reactive.asFlow
 import kotlinx.coroutines.reactive.awaitSingleOrNull
 import org.intellij.lang.annotations.Language
 import org.springframework.r2dbc.core.DatabaseClient
+import org.springframework.r2dbc.core.await
 import org.springframework.r2dbc.core.awaitSingleOrNull
 import org.springframework.stereotype.Repository
 import java.util.UUID
@@ -72,8 +73,7 @@ class ReactiveAdRepository(
             .bind("pictures", objectMapper.writeValueAsString(ad.pictures))
             .bind("userId", ad.advertiserId)
             .bind("createdAt", ad.createdAt)
-            .then()
-            .awaitSingleOrNull()
+            .await()
 
         ad
     }

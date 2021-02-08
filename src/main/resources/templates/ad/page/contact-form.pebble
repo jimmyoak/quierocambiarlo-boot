@@ -1,32 +1,84 @@
-<div id="contactFormContainer" class="modal" tabindex="-1" role="dialog">
+<div id="contact_form_container" class="modal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <form action="#" method="post">
+            <form id="contact_form" action="/contactar/{{ ad.id }}" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="ad_id" value="{{ ad.id }}">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contactar con {{ user.name }} para {{ ad.title }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="input_leader_name">Nombre</label>
-                        <input type="text" name="leader_name" required class="form-control" minlength="3"
-                               maxlength="50">
+                        <input type="text" id="input_leader_name" name="leader_name" required class="form-control"
+                               minlength="3" maxlength="50">
                     </div>
                     <div class="form-group">
                         <label for="input_leader_email">Email</label>
                         <input type="email" id="input_leader_email" name="leader_email" required class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="input_leader_offer">Te lo cambio por</label>
-                        <input type="text" id="input_leader_offer" name="leader_offer" required class="form-control">
+                        <label for="input_leader_offer">¿Qué le ofreces a cambio?</label>
+                        <input type="text" id="input_leader_offer" name="leader_offer" required class="form-control"
+                               minlength="5" maxlength="50">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-block btn-primary">
                         <span class="not-loading">Enviar</span>
                         <div class="d-none spinner-border text-white mx-auto" role="status">
                             <span class="sr-only">Loading...</span>
                         </div>
                     </button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+<script id="contact_form_message_sent_template" type="text/template">
+    <div class="modal-header">
+        <h5 class="modal-title">Contactar con {{ user.name }} para {{ ad.title }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body text-center">
+        <i class="text-success fas fa-check display-1"></i>
+        <div class="h4">Mensaje enviado</div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal">Cerrar</button>
+    </div>
+</script>
+<script>
+    {% verbatim %}
+                document.getElementById('contact_form').addEventListener('submit', onContactFormSubmit => {
+                    onContactFormSubmit.preventDefault()
+
+                    onContactFormSubmit.target.classList.add('form-loading')
+                    const modalContent = document.querySelector('#contact_form_container .modal-content')
+                    const successContent = document.getElementById('contact_form_message_sent_template').innerHTML
+                    const request = new XMLHttpRequest()
+                    request.open('POST', '/api/v1/messages')
+                    request.send(new FormData(onContactFormSubmit.target))
+                    request.onreadystatechange = () => {
+                        if (request.readyState === XMLHttpRequest.DONE) {
+                            if (request.status === 201) {
+                                modalContent.innerHTML = successContent
+                            }
+                            setTimeout(() => {
+                                onContactFormSubmit.target.reset()
+                                $('#contact_form_container').modal('hide')
+                            }, 2000)
+                        }
+                    }
+                    request.onerror = () => {
+                        onContactFormSubmit.target.classList.remove('form-loading')
+                    }
+
+                    return false
+                })
+                {% endverbatim %}
+</script>

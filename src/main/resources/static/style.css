@@ -69,11 +69,16 @@ a.navbar-brand {
     border-color: #B22562;
 }
 
-form.form-loading button[type=submit] .not-loading {
+form.form-loading button[type=submit] .not-loading,
+form.form-success button[type=submit] .not-loading {
     display: none;
 }
 
 form.form-loading button[type=submit] .spinner-border {
+    display: block !important;
+}
+
+form.form-success button[type=submit] .success-icon {
     display: block !important;
 }
 
@@ -94,6 +99,7 @@ form.form-loading button[type=submit] .spinner-border {
     .position-xl-relative {
         position: relative;
     }
+
     .sticky-xl-top {
         position: sticky;
         top: 0;

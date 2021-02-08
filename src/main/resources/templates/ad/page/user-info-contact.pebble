@@ -1,4 +1,4 @@
 <button type="button" class="btn btn-block btn-primary"
-        data-toggle="modal" data-target="#contactFormContainer" role="button" aria-controls="contactFormContainer">
+        data-toggle="modal" data-target="#contact_form_container" role="button" aria-controls="contact_form_container">
     <i class="far fa-comment-dots"></i> Contactar
 </button>
