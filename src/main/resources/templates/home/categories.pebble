@@ -1,6 +1,6 @@
-<section class="container text-center p-4 container-home-categories">
+<section class="container text-center my-4 container-home-categories">
     {% for menuCategory in menuCategories %}
-        <a href="/trueques-de-{{ menuCategory.slug }}.html" class="btn btn-lg btn-outline-secondary my-1">
+        <a href="/trueques-de-{{ menuCategory.slug }}.html" class="btn btn-lg btn-outline-secondary border-0 m-1">
             <i class="fa {{ menuCategory.icon }} display-4 d-block"></i>
             <h5 class="card-title m-0">{{ menuCategory.name }}</h5>
         </a>

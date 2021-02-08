@@ -16,4 +16,5 @@
 {% block content %}
     {% include './jumbotron' %}
     {% include './categories' %}
+    {% include './seo' %}
 {% endblock %}

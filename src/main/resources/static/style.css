@@ -2,6 +2,8 @@
     --light-color: #FAFAFA;
     --primary-color: #B22562;
     --text-on-primary-color: #FFF;
+    --jumbotron-bg-color: var(--primary-color);
+    --jumbotron-text-color: var(--text-on-primary-color);
     --breadcrumb-separator: ">";
 }
 
@@ -53,8 +55,8 @@ a.navbar-brand {
 }
 
 .jumbotron {
-    background-color: var(--primary-color) !important;
-    color: var(--text-on-primary-color) !important;
+    background-color: var(--jumbotron-bg-color) !important;
+    color: var(--jumbotron-text-color) !important;
 }
 
 .container-home-categories .btn {
