@@ -1,4 +1,4 @@
-<div id="contact_form_container" class="modal" tabindex="-1" role="dialog">
+<div id="contact_form_container" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <form id="contact_form" action="/contactar/{{ ad.id }}" method="post" enctype="multipart/form-data">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-block btn-primary">
+                    <button type="submit" class="btn btn-primary mx-auto px-4">
                         <span class="not-loading">Enviar</span>
                         <div class="d-none spinner-border text-white mx-auto" role="status">
                             <span class="sr-only">Loading...</span>

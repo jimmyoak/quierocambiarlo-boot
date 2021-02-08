@@ -52,7 +52,7 @@ a.navbar-brand {
     width: 54px;
 }
 
-.jumbotron-home {
+.jumbotron {
     background-color: var(--primary-color);
     color: var(--text-on-primary-color);
 }
