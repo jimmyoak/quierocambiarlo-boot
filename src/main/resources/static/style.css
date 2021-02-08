@@ -53,8 +53,8 @@ a.navbar-brand {
 }
 
 .jumbotron {
-    background-color: var(--primary-color);
-    color: var(--text-on-primary-color);
+    background-color: var(--primary-color) !important;
+    color: var(--text-on-primary-color) !important;
 }
 
 .container-home-categories .btn {
