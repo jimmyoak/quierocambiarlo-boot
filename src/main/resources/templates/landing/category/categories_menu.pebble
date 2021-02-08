@@ -3,7 +3,7 @@
         {% for menuCategory in menuCategories %}
             <a href="/trueques-de-{{ menuCategory.slug }}.html"
                class="btn btn-outline-secondary text-center mx-1 border-0 {{ menuCategory.active ? 'active' : '' }}">
-                <i class="fa {{ menuCategory.icon }} d-block"></i>
+                <i class="fa {{ menuCategory.icon }} h2 mb-1 d-block"></i>
                 <div>{{ menuCategory.name }}</div>
             </a>
         {% endfor %}
