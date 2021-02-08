@@ -99,7 +99,7 @@ form.form-success button[type=submit] .success-icon {
     bottom: 0;
 }
 
-@media (min-width: var(--breakpoint-xl)) {
+@media (min-width: 1200px) {
     .position-xl-relative {
         position: relative;
     }
