@@ -96,6 +96,10 @@ form.form-success button[type=submit] .success-icon {
     transition-duration: .2s;
 }
 
+.dropdown-item.active, .dropdown-item:active {
+    background-color: var(--primary-color);
+}
+
 .sticky-bottom {
     position: sticky;
     bottom: 0;

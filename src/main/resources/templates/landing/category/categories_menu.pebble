@@ -1,10 +1,10 @@
 <section class="container my-4">
-    <div class="d-flex flex-wrap justify-content-center">
+    <div class="d-flex flex-nowrap overflow-auto">
         {% for menuCategory in menuCategories %}
             <a href="/trueques-de-{{ menuCategory.slug }}.html"
-               class="btn btn-outline-secondary border-0 {{ menuCategory.active ? 'active' : '' }}">
-                <i class="fa {{ menuCategory.icon }} mr-2"></i>
-                <h4 class="h6 m-0 d-inline-block align-middle">{{ menuCategory.name }}</h4>
+               class="btn btn-outline-secondary text-center mx-1 border-0 {{ menuCategory.active ? 'active' : '' }}">
+                <i class="fa {{ menuCategory.icon }} d-block"></i>
+                <div>{{ menuCategory.name }}</div>
             </a>
         {% endfor %}
     </div>
