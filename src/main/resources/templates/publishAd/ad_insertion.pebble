@@ -1,0 +1,120 @@
+<main id="insertion-content" class="py-3">
+    <form id="form_publish" action="/publicar-anuncio" method="post" enctype="multipart/form-data"
+          class="container col-12 col-lg-4">
+        <fieldset class="form-group">
+            <div class="form-group">
+                <div class="form-group-header d-flex justify-content-between align-items-center">
+                    <label for="input_title" class="h4 text-primary">¿Qué quieres cambiar?</label>
+                    <small data-behaviour="length" data-for="input_title"></small>
+                </div>
+                <input type="text" id="input_title" name="title" required class="form-control" minlength="5"
+                       maxlength="100">
+                <small class="form-text text-muted">Ejemplos: Iphone X, Seat Ibiza, Yamaha X-Max,...</small>
+            </div>
+
+            <div class="form-group">
+                <label for="input_category">Categoría</label>
+                <select id="input_category" name="category" required class="form-control">
+                    <option hidden selected></option>
+                    {% for category in categories %}
+                        <option value="{{ category.id }}">{{ category.name }}</option>
+                    {% endfor %}
+                </select>
+                <small class="form-text text-muted">Indica en qué categoría quieres publicar.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="input_location">Provincia</label>
+                <select id="input_location" name="province" required class="form-control">
+                    <option hidden selected></option>
+                    {% for province in provinces %}
+                        <option value="{{ province.name }}">{{ province.label }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <div class="form-group-header d-flex justify-content-between align-items-center">
+                    <label for="input_description">Descríbelo</label>
+                    <small data-behaviour="length" data-for="input_description" class="text-muted">0/300</small>
+                </div>
+                <textarea id="input_description" name="description" required class="form-control" rows="4"
+                          minlength="20" maxlength="300"></textarea>
+                <small class="form-text text-muted">Explica, por ejemplo, en qué estado se encuentra o de qué color es.</small>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">Fotos</div>
+                <input type="file" id="input_pictures" name="pictures" accept="image/jpeg,image/jpg" maxlength="5"
+                       multiple hidden>
+                <script type="text/template" id="input_picture_preview_template">
+                    {% verbatim %}
+                        <div class="draggable-item col-4 col-md-3 my-1">
+                            <div class="picture-container position-relative" data-name="{{ name }}">
+                                <img class="rounded img-thumbnail" src="{{ src }}" alt="Vista previa">
+                                <div class="draggable-item-overlay position-absolute w-100 h-100" style="top:0;left:0;">
+                                </div>
+                            </div>
+                        </div>
+                        {% endverbatim %}
+                </script>
+                <div id="input_pictures_preview" class="pictures-container row"></div>
+                <small class="pictures-container-hint d-none form-text text-muted">Puedes ordenar las fotos manteniendo pulsado encima de ellas y arrastrando.</small>
+                <label for="input_pictures" class="btn btn-block btn-outline-primary">
+                    <i class="fa fa-camera"></i>
+                    Seleccionar fotos
+                </label>
+                <small class="form-text text-muted">Puedes subir hasta 5 fotos</small>
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="form-group">
+                <div class="form-group-header d-flex justify-content-between align-items-center">
+                    <label for="input_interested_on" class="h4 text-primary">¿Qué te interesa a cambio?</label>
+                    <small data-behaviour="length" data-for="input_interested_on"></small>
+                </div>
+                <input type="text" id="input_interested_on" name="interested_on" required class="form-control"
+                       minlength="6" maxlength="100">
+                <small class="form-text text-muted">Una scooter, una moto deportiva, un SUV, una camiseta,...</small>
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <legend class="h4 text-primary">Forma de contacto</legend>
+            <div class="form-group">
+                <label for="input_advertiser_name">Nombre</label>
+                <input type="text" id="input_advertiser_name" name="advertiser_name" required class="form-control"
+                       minlength="3" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="input_advertiser_email">Email</label>
+                <input type="email" id="input_advertiser_email" name="advertiser_email" required
+                       class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="input_advertiser_phone">Teléfono</label>
+                <input type="tel" id="input_advertiser_phone" name="advertiser_phone" class="form-control"
+                       minlength="9" maxlength="12">
+                <small class="form-text text-muted">Este dato es opcional, aunque es una forma muy rápida de contacto.</small>
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <button type="submit" class="form-control btn btn-primary">
+                <span class="not-loading">Publicar</span>
+                <div class="d-none spinner-border text-white mx-auto" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </button>
+        </fieldset>
+    </form>
+</main>
+<script id="success-content" type="text/template">
+    <div class="container col-12 col-lg-4 text-center">
+        <div class="h1 display-1">
+            <i class="far fa-check-circle text-success"></i>
+        </div>
+        <div class="h3 mb-4">
+            ¡Ya hemos creado tu anuncio!
+        </div>
+        <a href="/" class="btn btn-primary">Volver al inicio</a>
+    </div>
+</script>
