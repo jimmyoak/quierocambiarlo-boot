@@ -1,6 +1,5 @@
 <section class="jumbotron jumbotron-fluid m-0">
     <div class="container">
         <h2>{{ seo.h2 }}</h2>
-        <p class="lead">Próximamente</p>
     </div>
 </section>
