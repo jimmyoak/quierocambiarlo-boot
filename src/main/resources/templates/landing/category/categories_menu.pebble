@@ -1,5 +1,5 @@
 <section class="container px-1 my-1">
-    <div class="d-flex flex-nowrap overflow-auto py-3">
+    <div class="d-flex flex-nowrap overflow-auto py-3 justify-content-sm-center">
         {% for menuCategory in menuCategories %}
             <a href="/trueques-de-{{ menuCategory.slug }}.html"
                class="btn btn-outline-secondary text-center mx-1 border-0 {{ menuCategory.active ? 'active' : '' }}">

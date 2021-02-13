@@ -59,10 +59,6 @@ a.navbar-brand {
     color: var(--jumbotron-text-color) !important;
 }
 
-.container-home-categories .btn {
-    width: 10rem;
-}
-
 .pictures-container .draggable-item .draggable-item-overlay {
     cursor: move;
 }
