@@ -1,5 +1,20 @@
 <section class="container">
-<h3 class="h6 small">Donde podrás encontrar todo lo que necesites e intercambiarlo.
-    <br><br>
-    No pagues por lo que necesitas, cámbialo por lo que no usas.</h3>
+    <div class="row my-4">
+        <div class="col-12 col-sm-6">
+            <h3 class="h6">¿Qué es QuieroCambiarlo?</h3>
+            <p class="small">Es un espacio libre donde podrás intercambiar todo aquello que ya no usas, por otras cosas que necesitas. Los cambios e intercambios son gratuitos e ilimitados. Cambia todo lo que imagines, el límite lo pones tú.</p>
+        </div>
+        <div class="col-12 col-sm-6">
+            <h3 class="h6">¿Cómo funciona?</h3>
+            <p class="small">QuieroCambiarlo trabaja para hacer posibles tus cambios. Tan solo tendrás que publicar tu anuncio, subir fotos de los artículos que quieras intercambiar y comentar que deseas obtener a cambio.</p>
+        </div>
+        <div class="col-12 col-sm-6">
+            <h3 class="h6">¿Qué puedo cambiar en QuieroCambiarlo?</h3>
+            <p class="small">Puedes cambiar todo tipo de objetos y artículos. No importa el coste, valor, tamaño o lugar. Desde ropa, vehículos, electrodomésticos, ordenadores, smartphones, complementos, bicicletas…</p>
+        </div>
+        <div class="col-12 col-sm-6">
+            <h3 class="h6">¿Cuál es nuestra filosofía?</h3>
+            <p class="small">Apostamos por un sistema de trueques fácil y gratuito, donde podrás intercambiar productos con otros usuarios. Recicla y ofrece una segunda vida a miles de artículos que ya no usas, cambiandolos por otras cosas. ¿A qué estás esperando? ¡Únete al intercambio!</p>
+        </div>
+    </div>
 </section>
