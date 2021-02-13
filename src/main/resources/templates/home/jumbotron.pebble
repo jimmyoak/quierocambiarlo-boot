@@ -4,8 +4,9 @@
         <h2 class="h6">Tu web de intercambios y trueques</h2>
         <p>¡Próximamente!</p>
         <div class="text-center">
-            <a href="/publicar-anuncio.html" class="btn btn-warning btn-lg my-1 col-12 col-md-4"
-               rel="nofollow">Publicar anuncio</a>
+            <a href="/publicar-anuncio.html" class="btn btn-warning btn-lg my-1 col-12 col-md-4">
+                <i class="fas fa-plus-circle mr-2"></i> Publicar anuncio
+            </a>
         </div>
     </div>
 </main>
