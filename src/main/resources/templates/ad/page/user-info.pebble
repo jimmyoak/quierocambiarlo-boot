@@ -1,7 +1,7 @@
 <div class="border rounded p-3 bg-white sticky-xl-top">
     <div class="mb-3">
-        <i class="fa fa-user-circle h1 my-0 mr-2 text-muted align-middle"></i>
-        {{ user.name }}
+        <img src="/icons/user/unknown.svg" alt="Foto usuario" width="48" height="48" class="mr-2">
+        <span class="align-middle">{{ user.name }}</span>
     </div>
     <div class="row">
         <div class="col-6">
