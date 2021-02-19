@@ -1,7 +1,9 @@
 :root {
     --light-color: #FAFAFA;
-    --primary-color: #B22562;
+    --primary-color: #C72A6E;
     --text-on-primary-color: #FFF;
+    --warning-color: #FFD909;
+    --text-on-warning-color: #212529;
     --jumbotron-bg-color: var(--primary-color);
     --jumbotron-text-color: var(--text-on-primary-color);
     --breadcrumb-separator: ">";
@@ -48,6 +50,37 @@ a.navbar-brand {
 
 .text-primary {
     color: var(--primary-color) !important;
+}
+
+.bg-warning {
+    background-color: var(--warning-color) !important;
+}
+
+.btn-warning {
+    color: var(--text-on-warning-color);
+    background-color: var(--warning-color) !important;
+    border-color: var(--warning-color) !important;
+}
+
+.border-warning {
+    border-color: var(--warning-color) !important;
+}
+
+.btn-outline-warning {
+    color: var(--warning-color) !important;
+    border-color: var(--warning-color) !important;
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning:not(:disabled):not(.disabled).active,
+.btn-outline-warning:not(:disabled):not(.disabled):active {
+    color: var(--text-on-warning-color) !important;
+    background-color: var(--warning-color) !important;
+    border-color: var(--warning-color) !important;
+}
+
+.text-warning {
+    color: var(--warning-color) !important;
 }
 
 .navbar-brand-logo {
