@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping
 @Controller
 class PublishAdController(private val menuCategories: List<MenuCategory>) {
     @GetMapping("/publicar-anuncio.html")
-    fun publishAd(): String = "publishAd/index"
+    fun publishAd(): String = "publishAd/new"
 
     @GetMapping("/publicar-anuncio")
     fun publishAdForm(model: Model): String {
