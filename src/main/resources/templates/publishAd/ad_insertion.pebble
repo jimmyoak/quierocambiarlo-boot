@@ -40,7 +40,8 @@
                 </div>
                 <textarea id="input_description" name="description" required class="form-control" rows="4"
                           minlength="20" maxlength="300"></textarea>
-                <small class="form-text text-muted">Explica, por ejemplo, en qué estado se encuentra o de qué color es.</small>
+                <small class="form-text text-muted">Explica, por ejemplo, en qué estado se encuentra o de qué color
+                    es.</small>
             </div>
 
             <div class="form-group">
@@ -59,7 +60,8 @@
                         {% endverbatim %}
                 </script>
                 <div id="input_pictures_preview" class="pictures-container row"></div>
-                <small class="pictures-container-hint d-none form-text text-muted">Puedes ordenar las fotos manteniendo pulsado encima de ellas y arrastrando.</small>
+                <small class="pictures-container-hint d-none form-text text-muted">Puedes ordenar las fotos manteniendo
+                    pulsado encima de ellas y arrastrando.</small>
                 <label for="input_pictures" class="btn btn-block btn-outline-primary">
                     <i class="fa fa-camera"></i>
                     Seleccionar fotos
@@ -94,10 +96,18 @@
                 <label for="input_advertiser_phone">Teléfono</label>
                 <input type="tel" id="input_advertiser_phone" name="advertiser_phone" class="form-control"
                        minlength="9" maxlength="12">
-                <small class="form-text text-muted">Este dato es opcional, aunque es una forma muy rápida de contacto.</small>
+                <small class="form-text text-muted">Este dato es opcional, aunque es una forma muy rápida de
+                    contacto.</small>
             </div>
         </fieldset>
         <fieldset class="form-group">
+            <div class="form-group form-check">
+                <input type="checkbox" id="input_terms_and_conditions" class="form-check-input"
+                       name="accept_terms_and_conditions" required>
+                <label for="input_terms_and_conditions" class="form-check-label">
+                    Acepto los <a href="/terminos-y-condiciones" class="text-decoration-none">términos y condiciones</a>
+                </label>
+            </div>
             <button type="submit" class="form-control btn btn-primary">
                 <span class="not-loading">Publicar</span>
                 <div class="d-none spinner-border text-white mx-auto" role="status">
