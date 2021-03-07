@@ -1,0 +1,403 @@
+{% extends 'layout/base' %}
+{% block title %}Términos y condiciones{% endblock %}
+
+{% block content %}
+    <main class="container">
+        <h1 class="h3 text-center">Términos y condiciones</h1>
+        <h2 class="h4">T&eacute;rminos de uso</h2>
+        <p>QuieroCambiarlo es una plataforma destinada al intercambio y trueque de productos y
+            objetos variados. As&iacute; pues, a trav&eacute;s del portal web y aplicaciones, los usuarios podr&aacute;n
+            utilizar nuestros servicios e intercambiar libremente una amplia variedad de art&iacute;culos. Para poder
+            acceder al
+            uso del servicio se precisa a los usuarios la aceptaci&oacute;n de los presentes T&eacute;rminos de uso y
+            condiciones, as&iacute; como para acceder a la comunicaci&oacute;n con otros usuarios y conocer su
+            geolocalizaci&oacute;n,
+            con el fin de llevar a cabo la transacci&oacute;n del servicio que se ofrece.</p>
+        <p>El uso del Servicio atribuye a
+            quien lo realiza la condici&oacute;n de usuario del mismo e implica la aceptaci&oacute;n &iacute;ntegra de
+            estos T&eacute;rminos
+            de Uso. En caso de no estar de acuerdo con todo o parte de estos T&eacute;rminos de Uso, el Usuario debe
+            abstenerse
+            de instalar y utilizar el Servicio.</p>
+        <p>A trav&eacute;s de la aceptaci&oacute;n de los presentes T&eacute;rminos
+            de Uso, el Usuario manifiesta que:</p>
+        <ul>
+            <li>Que ha le&iacute;do, entiende y comprende lo aqu&iacute; expuesto.</li>
+            <li>Que asume todas las obligaciones aqu&iacute; dispuestas.</li>
+            <li>Que es mayor de edad y tiene la capacidad legal suficiente para utilizar el Servicio.</li>
+        </ul>
+        <p>Estos T&eacute;rminos de Uso ser&aacute;n aplicables a los Usuarios a partir del 7&nbsp;de Marzo&nbsp;de
+            2021.
+            Su aceptaci&oacute;n por parte de los Usuarios ser&aacute; un paso previo e indispensable a la utilizaci&oacute;n
+            del Servicio. El titular del Servicio se reserva la facultad de realizar, en cualquier momento, alguna&nbsp;modificaci&oacute;n
+            o actualizaci&oacute;n de los T&eacute;rminos de Uso que, una vez entren en vigor, deber&aacute; ser
+            aceptada por el
+            Usuario para continuar utilizando el Servicio.</p>
+        <h3 class="h5">1. Titular del servicio</h3>
+        <p>Este sitio web es operado por
+            QuieroCambiarlo. En todo el sitio, los t&eacute;rminos &ldquo;nosotros&rdquo;, &ldquo;nos&rdquo; y &ldquo;nuestro&rdquo;
+            se refieren a QuieroCambiarlo. QuieroCambiarlo ofrece este sitio web, incluyendo toda la informaci&oacute;n,
+            herramientas y servicios disponibles para ti en este sitio, el usuario, est&aacute; condicionado a la
+            aceptaci&oacute;n
+            de todos los t&eacute;rminos, condiciones, pol&iacute;ticas y notificaciones aqu&iacute; establecidos.</p>
+        <h3 class="h5">2.
+            Inserci&oacute;n de datos personales</h3>
+        <p>Para poder utilizar el Servicio es necesaria la aceptaci&oacute;n de los
+            presentes T&eacute;rminos de uso y la Pol&iacute;tica de privacidad.</p>
+        <p>Los datos introducidos por el Usuario
+            deber&aacute;n ser exactos, correctos y actuales. El Usuario ser&aacute; responsable en todo momento de la
+            custodia
+            de&nbsp;la inserci&oacute;n de sus datos personales, asumiendo en consecuencia cualesquiera da&ntilde;os y
+            perjuicios que pudieran derivarse de su uso indebido&nbsp;y perjuicio a terceras personas.</p>
+        <p>Mediante la
+            aceptaci&oacute;n de los T&eacute;rminos de Uso, el Usuario consiente que sus datos pasen a formar parte del
+            fichero
+            de QuieroCambiarlo y el tratamiento de esos datos ser&aacute; conforme a lo previsto en la Pol&iacute;tica
+            de
+            Privacidad.</p>
+        <h3 class="h5">3. Normas de utilizaci&oacute;n del servicio</h3>
+        <p>El Usuario se obliga a utilizar el Servicio
+            conforme a lo establecido en la ley, la moral, el orden p&uacute;blico y los presentes T&eacute;rminos de
+            Uso.
+            Asimismo, se obliga hacer un uso adecuado del Servicio y a no emplearlo para realizar actividades il&iacute;citas
+            o
+            constitutivas de delito, que atenten contra los derechos de terceros o que infrinjan cualquier norma del
+            ordenamiento jur&iacute;dico.</p>
+        <p>El Usuario se obliga a no transmitir, introducir, difundir y poner a disposici&oacute;n
+            de terceros, cualquier tipo de material e informaci&oacute;n (productos, objetos, datos, contenidos,
+            mensajes,
+            dibujos, archivos de sonido e imagen, fotograf&iacute;as, software, etc.) que sean contrarios a la ley, la
+            moral, el
+            orden p&uacute;blico y los presentes T&eacute;rminos de Uso. A t&iacute;tulo enunciativo y en ning&uacute;n
+            caso
+            limitativo o excluyente, el Usuario se compromete a:</p>
+        <ul>
+            <li>&nbsp;No insertar ni difundir contenidos o propaganda de car&aacute;cter racista, xen&oacute;fobo,
+                transfobo,
+                homofobo, pornogr&aacute;fico, de apolog&iacute;a del terrorismo o que atenten contra los derechos
+                humanos.
+            </li>
+            <li>&nbsp;No difundir, transmitir o poner a disposici&oacute;n de terceros cualquier tipo de informaci&oacute;n,
+                elemento o contenido que atente contra los derechos fundamentales y las libertades p&uacute;blicas
+                reconocidos
+                constitucionalmente y en los tratados internacionales.
+            </li>
+            <li>&nbsp;No difundir, transmitir o poner a disposici&oacute;n de terceros cualquier tipo de informaci&oacute;n,
+                elemento o contenido que constituya publicidad il&iacute;cita o desleal.
+            </li>
+            <li>No transmitir publicidad no solicitada o autorizada, material publicitario, &ldquo;correo basura&rdquo;,
+                &ldquo;cartas en cadena&rdquo;, &ldquo;estructuras piramidales&rdquo;, o cualquier otra forma de
+                solicitaci&oacute;n,
+                excepto en aquellas &aacute;reas (tales como espacios comerciales) que hayan sido exclusivamente
+                concebidas
+                para
+                ello.
+            </li>
+            <li>No introducir o difundir cualquier informaci&oacute;n y contenidos falsos, enga&ntilde;osos,
+                ambiguos o inexactos de forma que induzca o pueda inducir a error a los receptores de la
+                informaci&oacute;n.
+            </li>
+            <li>No suplantar la identidad de otros Usuarios del Servicio, ni transmitir los datos de acceso a la
+                cuenta ni la
+                contrase&ntilde;a a un tercero sin el consentimiento de QuieroCambiarlo.
+            </li>
+            <li>No difundir, transmitir o
+                poner a disposici&oacute;n de terceras personas cualquier tipo de informaci&oacute;n, elemento o
+                contenido
+                sin
+                autorizaci&oacute;n de los titulares de los derechos de propiedad intelectual e industrial que puedan
+                recaer
+                sobre
+                tal informaci&oacute;n, elemento o contenido.
+            </li>
+            <li>No difundir, transmitir o poner a disposici&oacute;n de
+                terceros cualquier tipo de informaci&oacute;n, elemento o contenido que suponga una violaci&oacute;n del
+                secreto de
+                las comunicaciones y la legislaci&oacute;n de datos de car&aacute;cter personal.
+            </li>
+            <li>No difundir,
+                transmitir o poner a disposici&oacute;n de terceros fotograf&iacute;as ni cualquier representaci&oacute;n
+                o
+                imagen
+                de personas menores de edad.
+            </li>
+            <li>Cualquier sustancia que requiera una receta m&eacute;dica o que deba
+                dispensarse bajo la supervisi&oacute;n de un m&eacute;dico (doctor, dentista, optometrista, &oacute;ptico,
+                farmac&eacute;utico
+                o veterinario) no est&aacute; permitida en QuieroCambiarlo. As&iacute; como los productos que puedas
+                influir
+                en la
+                salud del individuo (que presenten contraindicaciones, efectos adversos, etc) y perecederos de cualquier
+                tipo.
+            </li>
+            <li>Es obligatorio disponer de autorizaci&oacute;n sanitaria de funcionamiento para desarrollar
+                cualquier
+                actividad o servicio sanitario (n&uacute;mero de colegiado o n&uacute;mero de registro del
+                centro).&nbsp;
+            </li>
+        </ul>
+        <p>El
+            Usuario se obliga a mantener indemne a QuieroCambiarlo ante cualquier posible reclamaci&oacute;n, multa,
+            pena o
+            sanci&oacute;n que pueda venir obligada a soportar como consecuencia del incumplimiento por parte del
+            Usuario de
+            cualquiera de las normas de utilizaci&oacute;n antes indicadas, reserv&aacute;ndose, QuieroCambiarlo el
+            derecho a
+            solicitar la indemnizaci&oacute;n por da&ntilde;os y perjuicios que corresponda.</p>
+        <h3 class="h5">4. Exclusi&oacute;n de
+            Usuarios</h3>
+        <p>QuieroCambiarlo se reserva el derecho a impedir el uso del Servicio, ya sea de forma temporal o
+            definitiva, a cualquier Usuario que infrinja cualquiera de las normas establecidas en estos T&eacute;rminos
+            de Uso,
+            la ley o la moral. As&iacute; pues, QuieroCambiarlo tambi&eacute;n podr&aacute; excluir Usuarios e incluso
+            dejar de
+            prestar total o parcialmente el Servicio cuando as&iacute; lo considere oportuno para mejorar la operativa
+            del
+            Servicio y/o del resto de los usuarios del mismo.</p>
+        <h3 class="h5">5. Exclusi&oacute;n de responsabilidad</h3>
+        <p>
+            QuieroCambiarlo no es propietaria de ninguno de los art&iacute;culos publicados o intercambiados a trav&eacute;s
+            de
+            su plataforma, y no forma parte de la transacci&oacute;n de intercambio llevada a cabo entre un usuario y
+            otro.</p>
+        <p>As&iacute; pues, QuieroCambiarlo no revisa ni valida los productos que los Usuarios ofrecen a trav&eacute;s
+            del
+            Servicio, por lo que no ser&aacute; responsable, ni directa ni indirectamente, ni subsidiariamente, de los
+            da&ntilde;os
+            y perjuicios de cualquier naturaleza derivados de la utilizaci&oacute;n y contrataci&oacute;n de los
+            contenidos y de
+            las actividades de los Usuarios y/o de terceros a trav&eacute;s del Servicio as&iacute; como de la falta de
+            licitud,
+            fiabilidad, utilidad, veracidad, exactitud, exhaustividad y actualidad de los mismos.</p>
+        <p>Con car&aacute;cter
+            informativo, y en ning&uacute;n caso limitativo, QuieroCambiarlo anuncia que no ser&aacute; responsable por
+            los da&ntilde;os
+            y perjuicios de cualquier naturaleza derivados de:</p>
+        <p>a) La utilizaci&oacute;n que los Usuarios hagan del
+            Servicio ni por el estado, origen, posible inexactitud, o posible falsedad de los datos proporcionados por
+            los
+            Usuarios ni de los art&iacute;culos o servicios ofrecidos a trav&eacute;s de la Web, App o Redes Sociales
+            propias de
+            la corporaci&oacute;n.</p>
+        <p>b) Los contenidos, informaciones, opiniones y manifestaciones de cualquier Usuario o de
+            terceras personas o entidades que se comuniquen o exhiban a trav&eacute;s del Servicio (incluye el env&iacute;o
+            de
+            im&aacute;genes).</p>
+        <p>c) La utilizaci&oacute;n que los Usuarios puedan hacer de los materiales del Servicio, ya
+            sean prohibidos o permitidos, en infracci&oacute;n de los derechos de propiedad intelectual y/o industrial,
+            informaci&oacute;n confidencial, de contenidos del Servicio o de terceros.</p>
+        <p>d) La realizaci&oacute;n de actos
+            de competencia desleal y publicidad il&iacute;cita.</p>
+        <p>e) La eventual p&eacute;rdida de datos de los Usuarios por
+            causa no atribuible al Servicio.</p>
+        <p>f) El acceso de menores de edad a los contenidos incluidos en el
+            Servicio.</p>
+        <p>g) La indisponibilidad, errores, fallos de acceso y falta de continuidad del Servicio.</p>
+        <p>h) Los
+            fallos o incidencias que pudieran producirse en las comunicaciones, borrado o transmisiones incompletas.</p>
+        <p>i) La
+            no operatividad o problemas en la direcci&oacute;n de email o tel&eacute;fono facilitados por el
+            Usuario.</p>
+        <p>
+            QuieroCambiarlo responder&aacute; &uacute;nica y exclusivamente frente al Usuario de los Servicios que
+            preste por s&iacute;
+            misma y de los contenidos directamente originados e identificados con su copyright, quedando limitada, como
+            m&aacute;ximo,
+            al importe de las cantidades percibidas directamente del Usuario por QuieroCambiarlo, con exclusi&oacute;n
+            en todo
+            caso de responsabilidad por da&ntilde;os indirectos o por lucro cesante.</p>
+        <p>Cualquier reclamaci&oacute;n o
+            controversia que pueda surgir entre los Usuarios del Servicio deber&aacute; ser solventada entre &eacute;stos,
+            oblig&aacute;ndose
+            a mantener a QuieroCambiarlo totalmente ajeno. Aun as&iacute;, QuieroCambiarlo dedicar&aacute; sus mejores
+            esfuerzos
+            para facilitar una eficaz y satisfactoria soluci&oacute;n a trav&eacute;s de su correo electr&oacute;nico
+            info.quierocambiarlo@gmail.com</p>
+        <h3 class="h5">6. Contenidos y
+            servicios enlazados a trav&eacute;s del Servicio</h3>
+        <p>El Servicio puede incluir dispositivos t&eacute;cnicos de
+            enlace, directorios o incluso instrumentos de b&uacute;squeda que permitan al Usuario acceder a otras p&aacute;ginas
+            y portales de internet.</p>
+        <p>El Usuario reconoce y acepta que el acceso a los Sitios Enlazados ser&aacute; bajo su
+            exclusivo riesgo y responsabilidad y ajena a QuieroCambiarlo cualquier responsabilidad sobre eventuales
+            vulneraciones de derechos de propiedad intelectual o industrial de los titulares de los Sitios Enlazados. As&iacute;
+            mismo el Usuario exime a QuieroCambiarlo de cualquier responsabilidad sobre la disponibilidad t&eacute;cnica
+            de las
+            p&aacute;ginas web enlazadas, la calidad, fiabilidad, exactitud y/o veracidad de los servicios,
+            informaciones,
+            elementos y contenidos a los que el Usuario pueda acceder.</p>
+        <p>En dichas ocasiones, QuieroCambiarlo s&oacute;lo
+            ser&aacute; responsable de los contenidos y servicios suministrados en los Sitios Enlazados en la medida en
+            que
+            tenga conocimiento efectivo de la ilicitud y no haya desactivado el enlace con la diligencia debida. En el
+            supuesto
+            de que el Usuario considere que existe un Sitio Enlazado con contenidos il&iacute;citos o inadecuados podr&aacute;
+            comunic&aacute;rselo a QuieroCambiarlo, sin que en ning&uacute;n caso esta comunicaci&oacute;n conlleve la
+            obligaci&oacute;n
+            de retirar el correspondiente enlace.</p>
+        <p>En ning&uacute;n caso, la existencia QuieroCambiarlo de Sitios Enlazados
+            debe presuponer la formalizaci&oacute;n de acuerdos con los responsables o titulares de los mismos, ni la
+            recomendaci&oacute;n, promoci&oacute;n o identificaci&oacute;n de &nbsp;con las manifestaciones, contenidos
+            o
+            servicios prove&iacute;dos. QuieroCambiarlo no conoce los contenidos y servicios de los Sitios Enlazados y,
+            por
+            tanto, no se hace responsable de forma directa o indirecta por los da&ntilde;os producidos por la ilicitud,
+            calidad,
+            desactualizaci&oacute;n, indisponibilidad, error e inutilidad de los contenidos y/o servicios de los Sitios
+            Enlazados ni por cualquier otro da&ntilde;o que no sea directamente imputable a QuieroCambiarlo.</p>
+        <h3 class="h5">7. Propiedad
+            intelectual e industrial</h3>
+        <p>Los derechos de propiedad industrial e intelectual sobre las obras, prestaciones
+            protegidas y cualquier contenido o elemento sobre los que recaigan derechos de propiedad intelectual e
+            industrial
+            que se usen en el Servicio, pertenecen a sus leg&iacute;timos titulares. El Usuario no adquirir&aacute; por
+            el uso
+            del Servicio ning&uacute;n derecho de propiedad intelectual o industrial, ni licencia de uso sobre tales
+            elementos.</p>
+        <p>Son Contenidos del Servicio, los textos, fotograf&iacute;as, gr&aacute;ficos, im&aacute;genes,
+            iconos, tecnolog&iacute;a, software, bases de datos, y dem&aacute;s contenidos audiovisuales o sonoros, as&iacute;
+            como su dise&ntilde;o gr&aacute;fico y c&oacute;digos fuente utilizados en el Servicio.</p>
+        <p>Las im&aacute;genes,
+            el texto, los gr&aacute;ficos, los ficheros de animaci&oacute;n y v&iacute;deo, el software y la apariencia
+            del
+            sitio web de QuieroCambiarlo son objeto de protecci&oacute;n por derechos de propiedad intelectual e
+            industrial.
+            Esos elementos no podr&aacute;n ser v&aacute;lida y leg&iacute;timamente copiados ni distribuidos para uso
+            comercial, ni podr&aacute;n ser modificados o insertados en otros sitios web sin previa autorizaci&oacute;n
+            expresa
+            de sus titulares.</p>
+        <p>El Usuario manifiesta ser titular en exclusiva de todos los derechos que recaen sobre las
+            obras, prestaciones protegidas y cualquier otro elemento protegido por propiedad intelectual o industrial
+            que
+            incorpore en el servicio.</p>
+        <p>El Usuario cede gratuitamente y en exclusiva a QuieroCambiarlo los derechos de
+            comunicaci&oacute;n p&uacute;blica, reproducci&oacute;n, distribuci&oacute;n y transformaci&oacute;n que
+            tiene sobre
+            los Contenidos, en todas las modalidades de explotaci&oacute;n existentes en la fecha aceptaci&oacute;n de
+            estos T&eacute;rminos
+            de Uso, por todo el tiempo de vigencia de los derechos objeto de cesi&oacute;n, para el &aacute;mbito
+            territorial
+            universal.</p>
+        <p>QuieroCambiarlo no representa ni tiene vinculaci&oacute;n empresarial con ninguna de las marcas que
+            puedas encontrar en los anuncios publicados.</p>
+        <p>Cualquier consulta relacionada con lo anterior puede ser
+            comunicada a trav&eacute;s del contacto directo con el personal t&eacute;cnico en info.quierocambiarlo@gmail.com</p>
+        <h3 class="h5">8. Publicaci&oacute;n
+            de anuncios</h3>
+        <p>Los usuarios que deseen cambiar un producto, deber&aacute;n tener en cuenta que mediante la
+            publicaci&oacute;n de su anuncio est&aacute; emitiendo una oferta de intercambio, que ser&aacute; v&aacute;lida
+            desde que &eacute;sta fuese aceptada por otro usuario.</p>
+        <p>En cualquier caso, a la hora de publicar sus anuncios
+            el usuario deber&aacute; tomar en consideraci&oacute;n la siguiente normativa de uso:</p>
+        <ul>
+            <li>No se permite publicar anuncios con im&aacute;genes de contenido sexual.</li>
+            <li>No se permite publicar anuncios relacionados con ning&uacute;n tipo de contenido sexual, &nbsp;erotismo,
+                o
+                fetichismo, de la misma manera que tampoco se permiten anuncios &nbsp;relacionados con masajes,
+                servicios de
+                compa&ntilde;&iacute;a o amistad.
+            </li>
+            <li>No se permite publicar anuncios de productos en mal estado o gravemente deteriorados, sin especificarlo
+                en su
+                descripci&oacute;n.
+            </li>
+            <li>No se permite anunciar esquemas de estafa piramidal o actividades similares.</li>
+            <li>No se permite publicar im&aacute;genes de menores de edad.</li>
+            <li>No se permite publicar anuncios de intercambio, trueque o venta de sustancias estupefacientes, psicotr&oacute;picos,
+                f&aacute;rmacos no autorizados ni toxinas qu&iacute;micas.
+            </li>
+            <li>No se permite publicar anuncios de intercambio, trueque o venta de armas de ning&uacute;n tipo.</li>
+            <li>No se permite publicar anuncios relacionados con animales.</li>
+            <li>No se permite publicar im&aacute;genes o descripciones que no se correspondan con el producto real.</li>
+            <li>S&oacute;lo est&aacute; permitido anunciar un inmueble por anuncio. El inmueble deber&aacute; anunciarse
+                en la
+                localidad en la que se encuentre.
+            </li>
+            <li>No se permite buscar compa&ntilde;eras o compa&ntilde;eros para piso de masajes, o pisos para
+                actividades
+                sexuales de ning&uacute;n tipo.
+            </li>
+        </ul>
+        <p>Por su parte, el Usuario interesado en adquirir un producto debe tener en cuenta que cuando se compromete a
+            intercambiar un art&iacute;culo, a cambio de otro, est&aacute; suscribiendo un contrato de trueque con otro
+            usuario.
+            Asimismo, el Usuario deber&aacute; tener en cuenta que al adquirir un art&iacute;culo, ser&aacute;
+            considerado
+            sujeto pasivo del Impuesto sobre Transmisiones Patrimoniales Onerosas y Actos Jur&iacute;dicos Documentados
+            (&ldquo;ITPAJD&rdquo;),
+            modalidad TPO, oblig&aacute;ndose a mantener a QuieroCambiarlo totalmente indemne en caso de no dar
+            cumplimiento a
+            dicha obligaci&oacute;n.</p>
+        <p>En cualquier caso, a la hora de publicar sus anuncios el usuario deber&aacute; tomar
+            en consideraci&oacute;n las reglas de convivencia.</p>
+        <h3 class="h5">Mediaci&oacute;n</h3>
+        <p>QuieroCambiarlo es una aplicaci&oacute;n
+            que act&uacute;a como mero intermediario entre los dos o m&aacute;s usuarios que intercambian productos.
+            QuieroCambiarlo no es propietaria de ninguno de los art&iacute;culos que se intercambian a trav&eacute;s de
+            su
+            plataforma y no es parte en la compraventa llevada a cabo exclusivamente entre usuarios. QuieroCambiarlo no
+            revisa
+            ni valida los productos que los usuarios ofrecen a trav&eacute;s del servicio, por lo que QuieroCambiarlo no
+            ser&aacute;
+            en ning&uacute;n caso responsable, ni directa ni indirectamente, ni subsidiariamente, de los da&ntilde;os y
+            perjuicios de cualquier naturaleza derivados de la utilizaci&oacute;n y contrataci&oacute;n de los
+            contenidos y de
+            las actividades de los usuarios y/o de terceros a trav&eacute;s del servicio, as&iacute; como tampoco ser&aacute;
+            responsable de la falta de licitud, fiabilidad, utilidad, veracidad, exactitud, exhaustividad y actualidad
+            de los
+            mismos.</p>
+        <p>Con car&aacute;cter general, los productos adquiridos a trav&eacute;s de la aplicaci&oacute;n de
+            QuieroCambiarlo no pueden ser devueltos, salvo en aquellos casos en los que as&iacute; sea pactado
+            mutuamente entre
+            los mismos usuarios. Con car&aacute;cter general, el derecho de desistimiento no resulta de aplicaci&oacute;n
+            a las
+            transacciones realizadas a trav&eacute;s de la aplicaci&oacute;n de QuieroCambiarlo, salvo en aquellos casos
+            en los
+            que la ley lo reconozca expresamente, en cuyo caso, dicho derecho deber&aacute; hacerse valer directamente
+            por el
+            comprador frente al vendedor, sin que QuieroCambiarlo pueda resultar en ning&uacute;n caso responsable en el
+            supuesto de incumplimiento por parte del vendedor.</p>
+        <p>Los siguientes supuestos casos est&aacute;n excluidos de
+            nuestra pol&iacute;tica de devoluciones y compensaciones:</p>
+        <ul>
+            <li>Productos no permitidos en nuestras reglas
+                de convivencia
+            </li>
+            <li>Productos cuyo contenido o funcionamiento no podamos comprobar (Cosm&eacute;tica,
+                perfumes, botellas de vino, climatizadores etc.)
+            </li>
+            <li>Productos averiados, en mal estado o para piezas.</li>
+            <li>Diferencias de color cuando el mismo no est&eacute; reflejado en la descripci&oacute;n.</li>
+            <li>Productos manchados, sucios o con otras marcas de uso.</li>
+            <li>Productos en los cuales falten accesorios no
+                imprescindibles para su uso (tornillos, botones, etc.)
+            </li>
+            <li>Discrepancias de medidas en ropa y calzado.</li>
+            <li>Productos en buen estado pero que la caja o el embalaje est&eacute; da&ntilde;ado.</li>
+            <li>Productos
+                manipulados por parte del comprador
+            </li>
+        </ul>
+        <p>Para las devoluciones de mutuo acuerdo entre usuarios, deber&aacute;n ser
+            los mismos quienes se pongan de acuerdo entre s&iacute; y lleguen a una soluci&oacute;n para ambas partes,
+            quedando
+            QuieroCambiarlo como mero intermediario y exento de responsabilidad acerca de dicha devoluci&oacute;n.</p>
+        <p>
+            QuieroCambiarlo s&oacute;lo ofrecer&aacute; una soluci&oacute;n o compensaci&oacute;n al usuario afectado en
+            ocasiones muy puntuales y extraordinarias, siempre el caso&nbsp;haya sido evaluado&nbsp;por el &uacute;nico
+            canal
+            que ofrece QuieroCambiarlo para la resoluci&oacute;n de conflictos (info.quierocambiarlo@gmail.com). Los
+            casos
+            anteriormente nombrados ser&aacute;n situaciones en las que no se ofrecer&aacute; resoluci&oacute;n&nbsp;al
+            respecto, siendo QuieroCambiarlo ajeno a las circunstancias y causas expuestas. Recuerda que es necesario
+            conservar
+            el embalaje original para realizar cualquier reclamaci&oacute;n.</p>
+        <p>Para poder hacer uso de este servicio ser&aacute;
+            imprescindible que toda la transacci&oacute;n se haya efectuado a trav&eacute;s de QuieroCambiarlo y que el
+            producto
+            adquirido se ajuste a nuestras reglas de convivencia.</p>
+        <p>En caso de no recibir un producto, el tiempo de
+            reclamaci&oacute;n establecido es de 2&nbsp;meses. Pasado este plazo no ser&aacute; posible realizar ninguna
+            reclamaci&oacute;n ni recuperar el art&iacute;culo.</p>
+    </main>
+{% endblock %}
