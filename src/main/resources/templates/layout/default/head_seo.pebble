@@ -5,3 +5,8 @@
     <meta name="keywords" content="{{ seo.keywords }}">
 {% endif %}
 <link rel="canonical" href="{{ seo.canonical }}"/>
+{% if seo.index is defined and not seo.index %}
+    <meta name="robots" content="noindex"/>
+{% else %}
+    <meta name="robots" content="all"/>
+{% endif %}

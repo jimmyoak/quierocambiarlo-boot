@@ -1,5 +1,11 @@
 {% extends 'layout/base' %}
 {% block title %}Términos y condiciones{% endblock %}
+{% set seo = {
+    'keywords': 'terminos, condiciones, terminos de uso, terminos y condiciones',
+    'description': 'Términos de uso y condiciones',
+    'canonical': url('/terminos-y-condiciones'),
+    'index': false
+} %}
 
 {% block content %}
     <main class="container">

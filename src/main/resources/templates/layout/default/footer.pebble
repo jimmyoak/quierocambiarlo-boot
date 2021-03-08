@@ -1,14 +1,14 @@
 <section class="container mb-2">
     Síguenos en:
     <a href="https://www.instagram.com/quiero.cambiarlo/" rel="noopener" target="_blank"
-       class="text-decoration-none mx-2" style="color:#d62cbc!important">
+       class="text-decoration-none mx-2 text-nowrap" style="color:#d62cbc!important">
         <i class="fab fa-instagram  align-middle" style="font-size: 1.5rem"></i> Instagram
     </a>
     <a href="https://www.facebook.com/QuieroCambiarlo-105305711454002" rel="noopener" target="_blank"
-       class="text-decoration-none mx-2" style="color:#3b5998!important;">
+       class="text-decoration-none mx-2 text-nowrap" style="color:#3b5998!important;">
         <i class="fab fa-facebook align-middle" style="font-size: 1.5rem"></i> Facebook
     </a>
 </section>
 <section class="container mb-2">
-    <a href="/terminos-y-condiciones" class="text-dark text-decoration-none">Términos y condiciones</a>
+    <a href="/terminos-y-condiciones" class="text-dark text-decoration-none" rel="nofollow">Términos y condiciones</a>
 </section>
