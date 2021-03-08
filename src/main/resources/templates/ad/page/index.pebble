@@ -11,7 +11,7 @@
     'description': ad.description,
     'url': canonicalUrl,
     'image': ad.pictures[0] is defined ? url(ad.pictures[0].path) : url('/logo.png'),
-    'type': 'website'
+    'type': 'article'
 } %}
 
 {% block content %}
