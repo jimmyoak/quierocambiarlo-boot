@@ -10,7 +10,7 @@
     'title': 'Cambio ' + ad.title + ' por ' + ad.interestedOn + ' en ' + ad.province.label,
     'description': ad.description,
     'url': canonicalUrl,
-    'image': url('/logo.png'),
+    'image': ad.pictures[0] is defined ? url(ad.pictures[0].path) : url('/logo.png'),
     'type': 'website'
 } %}
 
