@@ -4,7 +4,6 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
     <url>
         <loc>https://www.quierocambiarlo.es/</loc>
     </url>
@@ -29,5 +28,14 @@
     <url>
         <loc>https://www.quierocambiarlo.es/publicar-anuncio.html</loc>
     </url>
-
+    <url>
+        <loc>
+            https://www.quierocambiarlo.es/cambio-fiat-scudo-205-por-moto-de-precio-similar-en-ciudad-real/92cdedd1-a023-48a9-95d0-3420ad908c18
+        </loc>
+    </url>
+    <url>
+        <loc>
+            https://www.quierocambiarlo.es/cambio-saab-93-cabrio-por-coche-o-moto-en-toledo/27cfa632-e2fa-4f26-8647-5961c57cd589
+        </loc>
+    </url>
 </urlset>
