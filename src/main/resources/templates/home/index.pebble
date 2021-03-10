@@ -16,5 +16,6 @@
 {% block content %}
     {% include './jumbotron' %}
     {% include './categories' %}
+    {% include './lastAds' %}
     {% include './seo' %}
 {% endblock %}

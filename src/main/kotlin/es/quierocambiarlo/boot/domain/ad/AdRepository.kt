@@ -9,6 +9,8 @@ interface AdRepository {
     suspend fun findAllBy(categoryId: CategoryId): Flow<Ad>
 
     suspend fun findById(id: UUID): Ad?
+
+    suspend fun findAll(limit: Int = 10): Flow<Ad>
 }
 
 fun Ad?.orNotFound(): Ad = this ?: throw AdNotFound()

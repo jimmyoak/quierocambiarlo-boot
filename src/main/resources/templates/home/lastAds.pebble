@@ -1,0 +1,4 @@
+{% if lastAds is not empty %}
+    <h3 class="h5 text-center">Últimos anuncios</h3>
+    {% include 'landing/category/results' with { 'results': lastAds } %}
+{% endif %}

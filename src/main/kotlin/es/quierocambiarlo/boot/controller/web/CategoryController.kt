@@ -1,6 +1,8 @@
 package es.quierocambiarlo.boot.controller.web
 
 import es.quierocambiarlo.boot.domain.ad.AdRepository
+import es.quierocambiarlo.boot.domain.ad.toResult
+import es.quierocambiarlo.boot.domain.ad.toResults
 import es.quierocambiarlo.boot.view.model.MenuCategory
 import es.quierocambiarlo.boot.view.model.Seo
 import kotlinx.coroutines.flow.map
@@ -25,9 +27,7 @@ class CategoryController(
         model["seo"] = seo
         model["openGraph"] = seo.toOpenGraph()
         model["menuCategories"] = menuCategoriesWithActive(slug)
-        model["results"] = adRepository.findAllBy(seo.id).map { ad ->
-            ad.copy(pictures = ad.pictures.map { it.copy(path = "/adp/${it.path}") })
-        }
+        model["results"] = adRepository.findAllBy(seo.id).toResults()
 
         return "landing/category/index"
     }

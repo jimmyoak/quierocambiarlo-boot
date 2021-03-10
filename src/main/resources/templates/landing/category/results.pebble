@@ -1,10 +1,9 @@
 <div class="container row mx-auto">
     {% for result in results %}
-        {# {% set imgsrc = result.pictures[0] | default('https://picsum.photos/300/300?random=' + loop.index) %} #}
         {% set imgsrc = result.pictures[0].path | default('/no-picture.png') %}
         <div class="col-6 col-md-4 col-xl-3 my-4">
             <div class="position-relative">
-                <img src="{{ imgsrc }}" alt="Foto {{ loop.index + 1 }} de {{ result.title }}"
+                <img src="{{ imgsrc }}" alt="Foto de {{ result.title }}"
                      class="border border-light rounded img-fluid">
                 <div class="position-absolute my-2" style="top:0;left:0">
                     <small class="bg-light text-dark p-1 rounded-right">

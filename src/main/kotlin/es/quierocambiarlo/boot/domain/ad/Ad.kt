@@ -2,6 +2,8 @@ package es.quierocambiarlo.boot.domain.ad
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import es.quierocambiarlo.boot.domain.location.Province
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 import org.springframework.http.codec.multipart.FilePart
 import java.time.OffsetDateTime
 import java.util.UUID
@@ -19,3 +21,7 @@ data class Ad(
 )
 
 data class AdPicture(@JsonProperty("path") val path: String)
+
+fun Flow<Ad>.toResults() = map(Ad::toResult)
+fun Ad.toResult() = copy(pictures = pictures.withPath())
+fun List<AdPicture>.withPath() = map { it.copy(path = "/adp/${it.path}") }

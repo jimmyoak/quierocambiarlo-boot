@@ -8,14 +8,17 @@ import es.quierocambiarlo.boot.domain.ad.CategoryId
 import es.quierocambiarlo.boot.domain.location.Province
 import es.quierocambiarlo.boot.infrastructure.r2dbc.nonNull
 import io.r2dbc.spi.Row
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.reactive.asFlow
 import kotlinx.coroutines.reactive.awaitSingleOrNull
+import kotlinx.coroutines.withContext
 import org.intellij.lang.annotations.Language
 import org.springframework.r2dbc.core.DatabaseClient
 import org.springframework.r2dbc.core.await
 import org.springframework.r2dbc.core.awaitSingleOrNull
+import org.springframework.r2dbc.core.flow
 import org.springframework.stereotype.Repository
 import java.util.UUID
 
@@ -42,6 +45,22 @@ WHERE category = :category::AD_CATEGORY
 ORDER BY created_at DESC"""
 
 @Language("PostgreSQL")
+private const val SELECT_ALL =
+    """SELECT id,
+       id,
+       title,
+       category::VARCHAR,
+       province::VARCHAR,
+       description,
+       interested_on,
+       pictures,
+       user_id,
+       created_at
+FROM ads
+ORDER BY created_at DESC
+LIMIT :limit"""
+
+@Language("PostgreSQL")
 private const val SELECT_ALL_BY_ID =
     """SELECT id,
        id,
@@ -58,7 +77,7 @@ WHERE id = :id
 ORDER BY created_at DESC"""
 
 @Repository
-class ReactiveAdRepository(
+class R2dbcAdRepository(
     private val database: DatabaseClient,
     private val objectMapper: ObjectMapper
 ) : AdRepository {
@@ -82,8 +101,7 @@ class ReactiveAdRepository(
         database.sql(SELECT_ALL_BY_CATEGORY_ID)
             .bind("category", categoryId.name)
             .map(::createAd)
-            .all()
-            .asFlow()
+            .flow()
     }
 
     override suspend fun findById(id: UUID): Ad? = coroutineScope {
@@ -91,6 +109,13 @@ class ReactiveAdRepository(
             .bind("id", id)
             .map(::createAd)
             .awaitSingleOrNull()
+    }
+
+    override suspend fun findAll(limit: Int): Flow<Ad> = withContext(Dispatchers.IO) {
+        database.sql(SELECT_ALL)
+            .bind("limit", limit)
+            .map(::createAd)
+            .flow()
     }
 
     private fun createAd(row: Row): Ad =
